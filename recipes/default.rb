@@ -3,7 +3,7 @@
 
 ### software installation
 ## Free and Open Source Software
-include_recipe 'workstation::atom'
+#include_recipe 'workstation::atom' # no build for f27?
 include_recipe 'workstation::audio_editing'
 include_recipe 'workstation::browsers'
 include_recipe 'workstation::c'
@@ -11,9 +11,9 @@ include_recipe 'workstation::coq'
 include_recipe 'workstation::cups' unless node['workstation']['cups_server'].empty?
 include_recipe 'workstation::database'
 include_recipe 'workstation::debuginfo'
-include_recipe 'workstation::denyhosts'
+#include_recipe 'workstation::denyhosts'
 include_recipe 'workstation::devel'
-include_recipe 'workstation::dns'
+#include_recipe 'workstation::dns'
 include_recipe 'workstation::eclipse'
 include_recipe 'workstation::emacs'
 include_recipe 'workstation::erlang'
@@ -60,7 +60,7 @@ include_recipe 'workstation::tuned'
 include_recipe 'workstation::utils'
 include_recipe 'workstation::video_editing'
 include_recipe 'workstation::vim'
-include_recipe 'workstation::xfce'
+#include_recipe 'workstation::xfce'
 
 ## proprietary software
 include_recipe 'workstation::chef' # this is mostly open source but is not in the repos
@@ -69,7 +69,6 @@ include_recipe 'workstation::filebeats' unless node['workstation']['filebeats'][
 include_recipe 'workstation::google_chrome' if node['workstation']['google_chrome']['install']
 include_recipe 'workstation::mathematica' unless node['workstation']['mathematica']['pkg_url'].empty? || node['workstation']['mathematica']['server'].empty? || node['workstation']['mathematica']['sha256'].empty?
 include_recipe 'workstation::matlab' unless node['workstation']['matlab']['pkg_url'].empty? || node['workstation']['matlab']['file_installation_key'].empty? || node['workstation']['matlab']['network_lic'].empty?
-include_recipe 'workstation::nvidia' if node['workstation']['nvidia']['install']
 
 
 ### administrativa

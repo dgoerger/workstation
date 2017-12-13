@@ -49,7 +49,7 @@ default['workstation']['utils']['packages'] = [
   'mutt',
   'nano',
   'ncdu',
-  'newsbeuter',
+  'newsboat',
   'nmap',
   'nmap-ncat',
   'nodejs-csslint',

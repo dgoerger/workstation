@@ -23,6 +23,7 @@ default['workstation']['gnome']['packages'] = [
   'dia',
   'focuswriter',
   'freemind',
+  'ghostwriter',
   'gimagereader-gtk',
   'gobby05',
   'gnome-calendar',

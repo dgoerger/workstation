@@ -17,6 +17,11 @@ template '/etc/profile.d/zoo_aliases.sh' do
   action :create
 end
 
+file '/etc/profile.d/PackageKit.sh' do
+  # bashism - doesn't work with ksh
+  action :delete
+end
+
 # set this up so it copies ~/.ssh for new users, with the correct permissions
 directory '/etc/skel/.ssh' do
   owner 'root'

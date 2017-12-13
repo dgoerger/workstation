@@ -35,4 +35,4 @@ cookbook_file '/etc/modprobe.d/nvidia-installer-disable-nouveau.conf' do
 end
 
 include_recipe 'workstation::selinux_disable'
-include_recipe 'workstation::pgi'
+include_recipe 'workstation::pgi' unless node['workstation']['pgi']['pkg_url'].empty?
