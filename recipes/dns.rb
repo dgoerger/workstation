@@ -1,12 +1,21 @@
-### installs and configures dnsmasq
+### installs and configures unbound and dnssec-trigger
 
-package 'dnsmasq' do
+package 'unbound' do
+  action :install
+end
+
+package 'dnssec-trigger' do
   action :install
 end
 
 service 'NetworkManager' do
   supports :reload => true
   action :nothing
+end
+
+service 'dnssec-triggerd' do
+  supports :restart => true
+  action [ :enable, :start ]
 end
 
 template '/etc/NetworkManager/NetworkManager.conf' do
@@ -18,14 +27,23 @@ template '/etc/NetworkManager/NetworkManager.conf' do
   notifies :reload, 'service[NetworkManager]', :delayed
 end
 
+template '/etc/unbound/unbound.conf' do
+  source 'unbound.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0444'
+  action :create
+  notifies :restart, 'service[dnssec-triggerd]', :delayed
+end
+
 # dnsblock - blackhole bad stuff
 execute 'dnsblock_initialize' do
-  command '/usr/local/bin/dnsblock_updater'
+  command '/usr/local/sbin/dnsblock'
   action :nothing
 end
 
-cookbook_file '/usr/local/bin/dnsblock_updater' do
-  source 'dnsblock_updater'
+cookbook_file '/usr/local/sbin/dnsblock' do
+  source 'dnsblock.sh'
   owner 'root'
   group 'root'
   mode '0554'
@@ -36,6 +54,6 @@ end
 cron 'dnsblock_update' do
   time :weekly
   user 'root'
-  command '/usr/local/sbin/dnsblock_updater'
+  command '/usr/local/sbin/dnsblock'
   action :create
 end
