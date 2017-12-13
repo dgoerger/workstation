@@ -58,7 +58,7 @@ end
 ### ANACONDA
 # anaconda - python3.6
 execute 'install_anaconda3' do
-  command 'bash /usr/local/src/anaconda-4.4.0.py3.x86_64.sh -b -p /usr/local/anaconda3'
+  command 'bash /usr/local/src/anaconda-5.0.1.py3.x86_64.sh -b -p /usr/local/anaconda3'
   action :nothing
 end
 
