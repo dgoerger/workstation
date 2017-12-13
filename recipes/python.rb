@@ -57,8 +57,8 @@ end
 
 ### ANACONDA
 # anaconda - python3.6
-execute 'install_anaconda3' do
-  command 'bash /usr/local/src/anaconda-5.0.1.py3.x86_64.sh -b -p /usr/local/anaconda3'
+execute 'install_anaconda' do
+  command 'bash /usr/local/src/anaconda-5.0.1.py3.x86_64.sh -b -p /usr/local/anaconda'
   action :nothing
 end
 
@@ -72,11 +72,11 @@ remote_file '/usr/local/src/anaconda-5.0.1.py3.x86_64.sh' do
   mode '0500'
   checksum '55e4db1919f49c92d5abbf27a4be5986ae157f074bf9f8238963cd4582a4068a'
   action :create
-  notifies :run, 'execute[install_anaconda3]', :immediately
+  notifies :run, 'execute[install_anaconda]', :immediately
 end
 
 link '/usr/local/bin/conda' do
-  to '/usr/local/anaconda3/bin/conda'
+  to '/usr/local/anaconda/bin/conda'
   link_type :symbolic
   action :create
 end
