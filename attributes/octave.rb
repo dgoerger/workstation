@@ -15,6 +15,7 @@ default['workstation']['octave']['packages'] = [
   'octave-general',
   'octave-gsl',
   'octave-image',
+  'octave-interval',
   'octave-io',
   'octave-jsonlab',
   'octave-lhapdf',
