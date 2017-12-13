@@ -1,4 +1,4 @@
-default['zoo_workstation']['audio_editing']['packages'] = [
+default['workstation']['audio_editing']['packages'] = [
   'ardour5',
   'ardour5-audiobackend-alsa',
   'ardour5-audiobackend-jack',

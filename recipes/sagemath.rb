@@ -23,4 +23,4 @@ link '/usr/lib64/libSingular.so' do
   not_if { File.exist?('/usr/lib64/libSingular.so') }
 end
 
-include_recipe 'zoo_workstation::desktop_cleanup'
+include_recipe 'workstation::desktop_cleanup'

@@ -1,4 +1,4 @@
-default['zoo_workstation']['r']['packages'] = [
+default['workstation']['r']['packages'] = [
   'R',
   'R-abind',
   'R-acepack',

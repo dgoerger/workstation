@@ -1,4 +1,4 @@
-default['zoo_workstation']['mate']['packages'] = [
+default['workstation']['mate']['packages'] = [
   'libmatekbd',
   'libmatemixer',
   'libmateweather',

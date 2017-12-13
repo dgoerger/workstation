@@ -1,4 +1,4 @@
-default['zoo_workstation']['robotics']['packages'] = [
+default['workstation']['robotics']['packages'] = [
   # per https://labs.fedoraproject.org/en/robotics/
   'arduino',
   'arduino-builder',

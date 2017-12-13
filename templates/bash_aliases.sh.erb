@@ -14,14 +14,14 @@ fi
 # disable ~/.lesshst by default
 export LESSHISTFILE=-
 
-<% unless node['zoo_workstation']['shell']['umask'].empty? -%>
+<% unless node['workstation']['shell']['umask'].empty? -%>
 # set umask
-umask <%= node['zoo_workstation']['shell']['umask'] -%>
+umask <%= node['workstation']['shell']['umask'] -%>
 <% end -%>
 
-<% unless node['zoo_workstation']['msmtp']['domain'].empty? -%>
+<% unless node['workstation']['msmtp']['domain'].empty? -%>
 # set sensible default GIT env vars
-export GIT_AUTHOR_EMAIL="${LOGNAME}@<%= node['zoo_workstation']['msmtp']['domain'] -%>"
+export GIT_AUTHOR_EMAIL="${LOGNAME}@<%= node['workstation']['msmtp']['domain'] -%>"
 export GIT_AUTHOR_NAME="$(getent passwd $LOGNAME | cut -d: -f5 | cut -d, -f1)"
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME

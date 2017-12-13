@@ -10,8 +10,8 @@ package 'emacs' do
   action :install
 end
 
-unless node['zoo_workstation']['emacs']['plugins'].empty?
-  node['zoo_workstation']['emacs']['plugins'].each do |pkg|
+unless node['workstation']['emacs']['plugins'].empty?
+  node['workstation']['emacs']['plugins'].each do |pkg|
     package pkg do
       action :install
     end

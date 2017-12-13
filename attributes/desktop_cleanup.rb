@@ -1,4 +1,4 @@
-default['zoo_workstation']['desktop_cleanup'] = [
+default['workstation']['desktop_cleanup'] = [
   # audio
   'lash-panel',
   'nvidia-settings',

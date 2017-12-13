@@ -1,1 +1,1 @@
-default['zoo_workstation']['cups_server'] = ''
+default['workstation']['cups_server'] = ''

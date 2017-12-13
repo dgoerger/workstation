@@ -1,3 +1,3 @@
-default['zoo_workstation']['rsyslog']['loghost'] = ''
-default['zoo_workstation']['rsyslog']['port'] = ''
-default['zoo_workstation']['rsyslog']['protocol'] = 'tcp'
+default['workstation']['rsyslog']['loghost'] = ''
+default['workstation']['rsyslog']['port'] = ''
+default['workstation']['rsyslog']['protocol'] = 'tcp'

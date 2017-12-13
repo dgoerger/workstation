@@ -1,4 +1,4 @@
-default['zoo_workstation']['rust']['packages'] = [
+default['workstation']['rust']['packages'] = [
   'rust',
   'rust-doc',
   'rust-gdb'

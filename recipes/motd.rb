@@ -4,12 +4,12 @@
 patch_cycle=nil
 
 # fetch schedule from attributes or databag
-if node['zoo_workstation']['patching']['auto']
-  unless node['zoo_workstation']['patching']['schedules'].empty?
+if node['workstation']['patching']['auto']
+  unless node['workstation']['patching']['schedules'].empty?
     # if attributes method, use that
     host=node['fqdn']
-    if node['zoo_workstation']['patching']['schedules'].key?(host)
-      server=node['zoo_workstation']['patching']['schedules'][host]
+    if node['workstation']['patching']['schedules'].key?(host)
+      server=node['workstation']['patching']['schedules'][host]
     end
   else
     # else try databag method
@@ -20,8 +20,8 @@ if node['zoo_workstation']['patching']['auto']
     # recalculate hour,minute based on REBOOT_DELAY (the grace period for users to log out)
     hour_tmp=server['hour']
     minute_tmp=server['minute']
-    unless node['zoo_workstation']['patching']['reboot_delay'].nil? || ! node['zoo_workstation']['patching']['reboot_delay'].to_i
-      reboot_delay = node['zoo_workstation']['patching']['reboot_delay'].to_i
+    unless node['workstation']['patching']['reboot_delay'].nil? || ! node['workstation']['patching']['reboot_delay'].to_i
+      reboot_delay = node['workstation']['patching']['reboot_delay'].to_i
     else
       # define a default reboot_delay of 5 minutes as courtesy to users
       reboot_delay = 5

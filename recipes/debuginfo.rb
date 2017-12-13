@@ -20,8 +20,8 @@ cookbook_file '/etc/dnf/plugins/debuginfo-install.conf' do
   action :create
 end
 
-unless node['zoo_workstation']['debuginfo_packages'].empty?
-  node['zoo_workstation']['debuginfo_packages'].each do |pkg|
+unless node['workstation']['debuginfo_packages'].empty?
+  node['workstation']['debuginfo_packages'].each do |pkg|
     package pkg do
       action :install
     end

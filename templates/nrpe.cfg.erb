@@ -11,7 +11,7 @@ log_facility=daemon
 # number.  The file is only written if the NRPE daemon is started by the root
 # user and is running in standalone mode.
 
-pid_file=<%= node['zoo_workstation']['nrpe']['pidfile'] %>
+pid_file=<%= node['workstation']['nrpe']['pidfile'] %>
 
 
 # PORT NUMBER
@@ -61,7 +61,7 @@ nrpe_group=nrpe
 #
 # NOTE: This option is ignored if NRPE is running under either inetd or xinetd
 
-allowed_hosts=<%= node['zoo_workstation']['nrpe']['allowed_hosts'] %>
+allowed_hosts=<%= node['workstation']['nrpe']['allowed_hosts'] %>
 
 
 # COMMAND ARGUMENT PROCESSING
@@ -100,8 +100,8 @@ ssl_cipher_list=ADH-AES256-SHA:ADH-AES128-SHA:@SECLEVEL=0
 allow_bash_command_substitution=0
 
 # CHECK DEFINITIONS
-<% unless node['zoo_workstation']['nrpe']['checks'].empty? -%>
-<%   node['zoo_workstation']['nrpe']['checks'].each do |check,command| -%>
+<% unless node['workstation']['nrpe']['checks'].empty? -%>
+<%   node['workstation']['nrpe']['checks'].each do |check,command| -%>
 <%=    "command[#{check}]=#{command}" %>
 <%   end -%>
 <% end -%>

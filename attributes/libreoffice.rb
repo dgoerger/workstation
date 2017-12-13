@@ -1,4 +1,4 @@
-default['zoo_workstation']['libreoffice_packages'] = [
+default['workstation']['libreoffice_packages'] = [
   'bibus',
   'libreoffice',
   'libreoffice-base',

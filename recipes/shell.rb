@@ -1,7 +1,7 @@
 ### installs and configures commons shells
 
-unless node['zoo_workstation']['shell']['packages'].empty?
-  node['zoo_workstation']['shell']['packages'].each do |pkg|
+unless node['workstation']['shell']['packages'].empty?
+  node['workstation']['shell']['packages'].each do |pkg|
     package pkg do
       action :install
     end

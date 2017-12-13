@@ -1,9 +1,9 @@
 # pidfile should be in a folder owned by nrpe user so that the init script can delete the old pidfile
-default['zoo_workstation']['nrpe']['pidfile'] = '/var/run/nrpe/nrpe.pid'
+default['workstation']['nrpe']['pidfile'] = '/var/run/nrpe/nrpe.pid'
 # restrict access to execute nrpe checks to open port 5666 - keep this locked down to the minimum required IPs
-default['zoo_workstation']['nrpe']['allowed_hosts'] = '127.0.0.1'
+default['workstation']['nrpe']['allowed_hosts'] = '127.0.0.1'
 # define some useful checks by default
-default['zoo_workstation']['nrpe']['checks'] = {
+default['workstation']['nrpe']['checks'] = {
   # ensure all defined automounts are mounted
   'check_autofs' => '/usr/local/lib64/nagios/check_autofs',
   # check usage on local disks

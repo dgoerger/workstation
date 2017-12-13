@@ -4,8 +4,8 @@ package 'eclipse-platform' do
   action :install
 end
 
-unless node['zoo_workstation']['eclipse']['plugins'].empty?
-  node['zoo_workstation']['eclipse']['plugins'].each do |pkg|
+unless node['workstation']['eclipse']['plugins'].empty?
+  node['workstation']['eclipse']['plugins'].each do |pkg|
     package pkg do
       action :install
     end

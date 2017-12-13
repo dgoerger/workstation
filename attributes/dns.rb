@@ -1,1 +1,1 @@
-default['zoo_workstation']['dns']['search_path'] = ''
+default['workstation']['dns']['search_path'] = ''

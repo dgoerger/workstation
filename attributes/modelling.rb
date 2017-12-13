@@ -1,4 +1,4 @@
-default['zoo_workstation']['modelling']['packages'] = [
+default['workstation']['modelling']['packages'] = [
   'blender',
   'cura',
   'cura-lulzbot',

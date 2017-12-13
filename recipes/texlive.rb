@@ -1,7 +1,7 @@
 ### installs and configures TeX Live
 
-unless node['zoo_workstation']['texlive']['packages'].empty?
-  node['zoo_workstation']['texlive']['packages'].each do |pkg|
+unless node['workstation']['texlive']['packages'].empty?
+  node['workstation']['texlive']['packages'].each do |pkg|
     package pkg do
       action :install
     end

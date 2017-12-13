@@ -1,9 +1,9 @@
 #%PAM-1.0
 auth     required pam_sepermit.so
-<% unless node['zoo_workstation']['duo']['required'] -%>
+<% unless node['workstation']['duo']['required'] -%>
 auth       substack     password-auth
 <% end -%>
-<% if node['zoo_workstation']['duo']['ssh'] -%>
+<% if node['workstation']['duo']['ssh'] -%>
 auth       sufficient   pam_duo.so
 <% end -%>
 auth       include      postlogin

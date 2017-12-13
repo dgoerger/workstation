@@ -9,11 +9,11 @@ execute 'install_fastx' do
 end
 
 remote_file '/usr/local/src/fastx.rpm' do
-  source node['zoo_workstation']['fastx']['pkg_url']
+  source node['workstation']['fastx']['pkg_url']
   owner 'root'
   group 'root'
   mode '0440'
-  checksum node['zoo_workstation']['fastx']['sha256']
+  checksum node['workstation']['fastx']['sha256']
   action :create_if_missing
   not_if { File.exist?('/usr/local/src/fastx.rpm') }
   notifies :run, 'execute[install_fastx]', :immediately
@@ -26,7 +26,7 @@ directory '/usr/lib/fastx2/var/license' do
   action :create
 end
 
-template "/usr/lib/fastx2/var/license/#{node['zoo_workstation']['fastx']['server']}.lic" do
+template "/usr/lib/fastx2/var/license/#{node['workstation']['fastx']['server']}.lic" do
   source 'fastx_licence_server.lic.erb'
   owner 'root'
   group 'root'

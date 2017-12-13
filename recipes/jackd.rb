@@ -1,7 +1,7 @@
 ### installs and configures JACKd audio server
 
-unless node['zoo_workstation']['jackd']['packages'].empty?
-  node['zoo_workstation']['jackd']['packages'].each do |pkg|
+unless node['workstation']['jackd']['packages'].empty?
+  node['workstation']['jackd']['packages'].each do |pkg|
     package pkg do
       action :install
     end

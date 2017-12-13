@@ -1,2 +1,2 @@
-default['zoo_workstation']['fastx']['pkg_url'] = ''
-default['zoo_workstation']['fastx']['server'] = ''
+default['workstation']['fastx']['pkg_url'] = ''
+default['workstation']['fastx']['server'] = ''

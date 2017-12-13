@@ -1,14 +1,14 @@
 filebeat.prospectors:
 - input_type: log
   paths:
-    <% node['zoo_workstation']['filebeats']['log_paths'].each do |path| %>
+    <% node['workstation']['filebeats']['log_paths'].each do |path| %>
     <%= path %>
     <% end %>
   fields:
     hostname: <%= node['hostname'] %>
     node_ip_address: <%= node['ipaddress'] %>
 output.logstash:
-  hosts: <%= node['zoo_workstation']['filebeats']['hosts'] %>
+  hosts: <%= node['workstation']['filebeats']['hosts'] %>
   bulk_max_size: 30
 filebeat.config_dir: /etc/filebeat/conf.d
 logging.level: info

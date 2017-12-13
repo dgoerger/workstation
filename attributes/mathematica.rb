@@ -1,3 +1,3 @@
-default['zoo_workstation']['mathematica']['pkg_url'] = ''
-default['zoo_workstation']['mathematica']['sha256'] = ''
-default['zoo_workstation']['mathematica']['server'] = ''
+default['workstation']['mathematica']['pkg_url'] = ''
+default['workstation']['mathematica']['sha256'] = ''
+default['workstation']['mathematica']['server'] = ''

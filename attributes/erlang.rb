@@ -1,3 +1,3 @@
-default['zoo_workstation']['erlang']['packages'] = [
+default['workstation']['erlang']['packages'] = [
   'erlang-typer'
 ]

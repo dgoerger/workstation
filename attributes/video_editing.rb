@@ -1,3 +1,3 @@
-default['zoo_workstation']['video_editing']['packages'] = [
+default['workstation']['video_editing']['packages'] = [
   'pitivi'
 ]
