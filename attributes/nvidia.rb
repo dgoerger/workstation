@@ -1,4 +1,4 @@
-default['workstation']['nvidia']['install'] = false
+default['workstation']['nvidia']['install'] = true
 default['workstation']['nvidia']['packages'] = [
   # NVIDIA DRIVER - REQUIRES NVIDIA REPO
   'nvidia-driver',
@@ -10,7 +10,7 @@ default['workstation']['nvidia']['packages'] = [
   'cuda-devel',
   'cuda-cli-tools',
   'cuda-docs',
-  'cuda-samples',
+  #'cuda-samples',
   'cuda-cublas-devel',
   'cuda-cudart-devel',
   'cuda-cufft-devel',

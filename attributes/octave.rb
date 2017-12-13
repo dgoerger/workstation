@@ -7,7 +7,6 @@ default['workstation']['octave']['packages'] = [
   'octave-COPASI',
   'octave-GeographicLib',
   'octave-NLopt',
-  'octave-SBML',
   'octave-audio',
   'octave-communications',
   'octave-control',
