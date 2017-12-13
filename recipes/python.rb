@@ -62,7 +62,7 @@ execute 'install_anaconda3' do
   action :nothing
 end
 
-remote_file '/usr/local/src/anaconda-4.4.0.py3.x86_64.sh' do
+remote_file '/usr/local/src/anaconda-5.0.1.py3.x86_64.sh' do
   # swap out to always source latest at time of machine build
   # .. find latest version at https://repo.continuum.io/archive
   #

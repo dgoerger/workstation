@@ -1,8 +1,5 @@
 ### sets MOTD
 
-# initialize variable
-patch_cycle=nil
-
 # fetch schedule from attributes or databag
 if node['workstation']['patching']['auto']
   unless node['workstation']['patching']['schedules'].empty?
