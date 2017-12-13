@@ -6,8 +6,8 @@ case ${1} in
   ''|*[!0-9]*) echo "not an integer" >/dev/null ;;
   *) REBOOT_DELAY=${1} ;;
 esac
-<% unless node['zoo_workstation']['patching']['reboot_delay'].nil? || ! node['zoo_workstation']['patching']['reboot_delay'].to_i -%>
-chef_reboot_delay=<%= node['zoo_workstation']['patching']['reboot_delay'].to_i %>
+<% unless node['workstation']['patching']['reboot_delay'].nil? || ! node['workstation']['patching']['reboot_delay'].to_i -%>
+chef_reboot_delay=<%= node['workstation']['patching']['reboot_delay'].to_i %>
 case ${chef_reboot_delay} in
   ''|*[!0-9]*) echo "not an integer" >/dev/null ;;
   *) REBOOT_DELAY=${chef_reboot_delay} ;;

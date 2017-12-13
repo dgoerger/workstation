@@ -1,3 +1,3 @@
-default['zoo_workstation']['haskell']['packages'] = [
+default['workstation']['haskell']['packages'] = [
   'cabal-install'
 ]

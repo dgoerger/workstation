@@ -28,7 +28,7 @@ template '/etc/firewalld/zones/dmz.xml' do
   mode '0444'
   action :create
   notifies :restart, 'service[firewalld]', :delayed
-  only_if { node['zoo_workstation']['firewalld']['default_zone'] == 'dmz' }
+  only_if { node['workstation']['firewalld']['default_zone'] == 'dmz' }
 end
 
 template '/etc/firewalld/zones/trusted.xml' do

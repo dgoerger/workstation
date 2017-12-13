@@ -1,1 +1,1 @@
-default['zoo_workstation']['chef']['server_uri'] = ''
+default['workstation']['chef']['server_uri'] = ''

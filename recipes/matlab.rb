@@ -52,11 +52,11 @@ execute 'untar_matlab_installer' do
 end
 
 remote_file '/var/tmp/matlab.tar.gz' do
-  source node['zoo_workstation']['matlab']['pkg_url']
+  source node['workstation']['matlab']['pkg_url']
   owner 'root'
   group 'root'
   mode '0550'
-  checksum node['zoo_workstation']['matlab']['sha256']
+  checksum node['workstation']['matlab']['sha256']
   action :create_if_missing
   not_if { File.exist?('/usr/local/matlab/bin/matlab') }
   notifies :run, 'execute[untar_matlab_installer]', :immediately

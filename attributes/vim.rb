@@ -1,4 +1,4 @@
-default['zoo_workstation']['vim']['plugins'] = [
+default['workstation']['vim']['plugins'] = [
   'vim-command-t',
   'vim-commentary',
   'vim-fugitive',

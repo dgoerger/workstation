@@ -14,9 +14,9 @@ package 'vim-X11' do
   # gui vim
   action :install
 end
-unless node['zoo_workstation']['vim']['plugins'].empty?
+unless node['workstation']['vim']['plugins'].empty?
   # all the plugins
-  node['zoo_workstation']['vim']['plugins'].each do |pkg|
+  node['workstation']['vim']['plugins'].each do |pkg|
     package pkg do
       action :install
     end

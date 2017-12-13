@@ -1,4 +1,4 @@
-default['zoo_workstation']['xfce']['packages'] = [
+default['workstation']['xfce']['packages'] = [
   'adwaita-gtk2-theme',
   'adwaita-icon-theme',
   'albatross-gtk2-theme',

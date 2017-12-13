@@ -1,1 +1,1 @@
-default['zoo_workstation']['symlinks'] = { }
+default['workstation']['symlinks'] = { }

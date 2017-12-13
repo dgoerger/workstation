@@ -1,10 +1,10 @@
 ### installs and configures python3 (and python2 where possible) packages
 # python2 is best-effort
 
-include_recipe 'zoo_workstation::zoo_repo'
+include_recipe 'workstation::zoo_repo'
 
-unless node['zoo_workstation']['python']['packages'].empty?
-  node['zoo_workstation']['python']['packages'].each do |pkg|
+unless node['workstation']['python']['packages'].empty?
+  node['workstation']['python']['packages'].each do |pkg|
     package pkg do
       action :install
     end
@@ -16,8 +16,8 @@ link '/usr/local/bin/jupyter' do
   to '/usr/bin/jupyter-3'
 end
 
-if node['zoo_workstation']['nvidia']['install']
-  include_recipe 'zoo_workstation::nvidia'
+if node['workstation']['nvidia']['install']
+  include_recipe 'workstation::nvidia'
 
   package 'python3-tensorflow-gpu' do
     action :install

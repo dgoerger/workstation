@@ -19,13 +19,13 @@ Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin
 ## Allow root to run any commands anywhere
 root    ALL=(ALL)       ALL
 
-<% unless node['zoo_workstation']['admin_local']['username'].empty? || node['zoo_workstation']['admin_local']['privileges'].empty? -%>
+<% unless node['workstation']['admin_local']['username'].empty? || node['workstation']['admin_local']['privileges'].empty? -%>
 ## local admin account
-<%=  "#{node['zoo_workstation']['admin_local']['username']} #{node['zoo_workstation']['admin_local']['privileges']}" -%>
+<%=  "#{node['workstation']['admin_local']['username']} #{node['workstation']['admin_local']['privileges']}" -%>
 <% end -%>
 
-<% unless node['zoo_workstation']['sudo']['groups'].empty? -%>
-<%   node['zoo_workstation']['sudo']['groups'].each do |group,privileges| -%>
+<% unless node['workstation']['sudo']['groups'].empty? -%>
+<%   node['workstation']['sudo']['groups'].each do |group,privileges| -%>
 <%=    "## #{group}" %>
 <%=    "%#{group} #{privileges}" %>
 <%   end -%>
@@ -33,9 +33,9 @@ root    ALL=(ALL)       ALL
 ## don't lock out default admin group "wheel"
 %wheel ALL=(ALL) ALL
 <% end -%>
-<% unless node['zoo_workstation']['sudo']['direct'].empty? -%>
+<% unless node['workstation']['sudo']['direct'].empty? -%>
 <%# in case there are sudo directives that are not based on standard group permissions, such as individual users or ALL -%>
-<%   node['zoo_workstation']['sudo']['direct'].each do |entry| -%>
+<%   node['workstation']['sudo']['direct'].each do |entry| -%>
 <%=    "#{entry}" %>
 <%   end -%>
 <% end -%>

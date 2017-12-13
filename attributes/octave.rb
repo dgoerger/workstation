@@ -1,4 +1,4 @@
-default['zoo_workstation']['octave']['packages'] = [
+default['workstation']['octave']['packages'] = [
   # base
   'octave',
   'octave-devel',

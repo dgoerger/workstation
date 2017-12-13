@@ -22,7 +22,7 @@ template '/etc/sssd/sssd.conf' do
   mode '0400'
   action :create
   notifies :run, 'execute[rebuild_authconfig]', :delayed
-  not_if { node['zoo_workstation']['sssd']['domain'].empty? || node['zoo_workstation']['sssd']['kerberos_realm'].empty? || node['zoo_workstation']['sssd']['kerberos_server'].empty? || node['zoo_workstation']['sssd']['ldap_dc'].empty? || node['zoo_workstation']['sssd']['ldap_server'].empty? }
+  not_if { node['workstation']['sssd']['domain'].empty? || node['workstation']['sssd']['kerberos_realm'].empty? || node['workstation']['sssd']['kerberos_server'].empty? || node['workstation']['sssd']['ldap_dc'].empty? || node['workstation']['sssd']['ldap_server'].empty? }
 end
 
 template '/etc/krb5.conf' do
@@ -31,5 +31,5 @@ template '/etc/krb5.conf' do
   group 'root'
   mode '0444'
   action :create
-  not_if { node['zoo_workstation']['sssd']['kerberos_realm'].empty? || node['zoo_workstation']['sssd']['kerberos_server'].empty? }
+  not_if { node['workstation']['sssd']['kerberos_realm'].empty? || node['workstation']['sssd']['kerberos_server'].empty? }
 end

@@ -1,4 +1,4 @@
-default['zoo_workstation']['security']['packages'] = [
+default['workstation']['security']['packages'] = [
   # per https://labs.fedoraproject.org/en/security/
   'etherape',
   'ettercap',

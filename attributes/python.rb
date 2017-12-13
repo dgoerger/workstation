@@ -1,4 +1,4 @@
-default['zoo_workstation']['python']['packages'] = [
+default['workstation']['python']['packages'] = [
   'ninja-ide',
   'python-beautifulsoup4',
   'python2-csvkit',
@@ -23,7 +23,7 @@ default['zoo_workstation']['python']['packages'] = [
   'python-webpy',
   'python2-yahoo-finance',
   'python3-beautifulsoup4',
-  'python3-botan2',
+  #'python3-botan', # rhbz#1487067
   'python3-csvkit',
   'python3-Cython',
   'python3-demjson',

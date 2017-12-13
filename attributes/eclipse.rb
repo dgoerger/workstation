@@ -1,4 +1,4 @@
-default['zoo_workstation']['eclipse']['plugins'] = [
+default['workstation']['eclipse']['plugins'] = [
   'eclipse-cdt',
   'eclipse-linuxtools-changelog',
   'eclipse-collabnet-merge',

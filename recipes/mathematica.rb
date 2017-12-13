@@ -6,11 +6,11 @@ execute 'install_mathematica' do
 end
 
 remote_file '/usr/local/src/mathematica.sh' do
-  source node['zoo_workstation']['mathematica']['pkg_url']
+  source node['workstation']['mathematica']['pkg_url']
   owner 'root'
   group 'root'
   mode '0550'
-  checksum node['zoo_workstation']['mathematica']['sha256']
+  checksum node['workstation']['mathematica']['sha256']
   action :create_if_missing
   not_if { File.exist?('/usr/local/src/mathematica.sh') }
   notifies :run, 'execute[install_mathematica]', :immediately

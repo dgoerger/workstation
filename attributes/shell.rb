@@ -1,5 +1,5 @@
-default['zoo_workstation']['shell']['umask'] = '0077'
-default['zoo_workstation']['shell']['packages'] = [
+default['workstation']['shell']['umask'] = '0077'
+default['workstation']['shell']['packages'] = [
   'bash-completion',
   'byobu',
   'dash',

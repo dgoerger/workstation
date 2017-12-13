@@ -1,4 +1,4 @@
-default['zoo_workstation']['java']['packages'] = [
+default['workstation']['java']['packages'] = [
   'icedtea-web',
   'java-1.8.0-openjdk-devel',
   'javapackages-tools',

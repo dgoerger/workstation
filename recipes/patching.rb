@@ -30,12 +30,12 @@ template '/usr/local/sbin/scheduled-reboot' do
   verify '/usr/bin/bash -n %{path}'
 end
 
-if node['zoo_workstation']['patching']['auto']
-  unless node['zoo_workstation']['patching']['schedules'].empty?
+if node['workstation']['patching']['auto']
+  unless node['workstation']['patching']['schedules'].empty?
     # if attributes method, use that
     host=node['fqdn']
-    if node['zoo_workstation']['patching']['schedules'].key?(host)
-      server=node['zoo_workstation']['patching']['schedules'][host]
+    if node['workstation']['patching']['schedules'].key?(host)
+      server=node['workstation']['patching']['schedules'][host]
     end
   else
     # else try databag method

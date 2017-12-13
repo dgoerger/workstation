@@ -1,9 +1,9 @@
 ### installs and configures GNOME Desktop Environment
 
-include_recipe 'zoo_workstation::gdm'
+include_recipe 'workstation::gdm'
 
-unless node['zoo_workstation']['gnome']['packages'].empty?
-  node['zoo_workstation']['gnome']['packages'].each do |pkg|
+unless node['workstation']['gnome']['packages'].empty?
+  node['workstation']['gnome']['packages'].each do |pkg|
     package pkg do
       action :install
     end

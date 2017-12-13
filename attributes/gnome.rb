@@ -1,4 +1,4 @@
-default['zoo_workstation']['gnome']['packages'] = [
+default['workstation']['gnome']['packages'] = [
   # devel
   'gnome-builder',
   'terminology',

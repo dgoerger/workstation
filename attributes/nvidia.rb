@@ -1,5 +1,5 @@
-default['zoo_workstation']['nvidia']['install'] = false
-default['zoo_workstation']['nvidia']['packages'] = [
+default['workstation']['nvidia']['install'] = false
+default['workstation']['nvidia']['packages'] = [
   # NVIDIA DRIVER - REQUIRES NVIDIA REPO
   'nvidia-driver',
   'kernel-devel',

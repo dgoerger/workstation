@@ -1,9 +1,9 @@
 ### installs and configures R
 
-include_recipe 'zoo_workstation::zoo_repo'
+include_recipe 'workstation::zoo_repo'
 
-unless node['zoo_workstation']['r']['packages'].empty?
-  node['zoo_workstation']['r']['packages'].each do |pkg|
+unless node['workstation']['r']['packages'].empty?
+  node['workstation']['r']['packages'].each do |pkg|
     package pkg do
       action :install
     end

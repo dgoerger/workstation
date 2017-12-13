@@ -1,1 +1,1 @@
-default['zoo_workstation']['tuned_profile'] = 'throughput-performance'
+default['workstation']['tuned_profile'] = 'throughput-performance'

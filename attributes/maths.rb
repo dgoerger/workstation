@@ -1,4 +1,4 @@
-default['zoo_workstation']['maths']['packages'] = [
+default['workstation']['maths']['packages'] = [
   # z3
   'ocaml-z3-devel',
   'python-z3',

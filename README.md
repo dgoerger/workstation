@@ -1,8 +1,8 @@
-# zoo_workstation
+# workstation
 
 ## Supported Platforms
 
-- Fedora 26
+- Fedora 27
 
 ## Usage
 
@@ -12,7 +12,7 @@ This cookbook should remain usable *without* a Chef Server, and without a [wrapp
 
 ```
 sudo git clone --depth=1 https://github.com/dgoerger/chake_skel.git /var/chake
-sudo git clone --depth=1 https://github.com/dgoerger/zoo_workstation.git /var/chake/cookbooks/zoo_workstation
-echo -e "local://$(hostname):\n  run_list:\n      - recipe[zoo_workstation]" | sudo tee /var/chake/nodes.yaml
+sudo git clone --depth=1 https://github.com/dgoerger/workstation.git /var/chake/cookbooks/workstation
+echo -e "local://$(hostname):\n  run_list:\n      - recipe[workstation]" | sudo tee /var/chake/nodes.yaml
 cd /var/chake; sudo rake converge
 ```

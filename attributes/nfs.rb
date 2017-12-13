@@ -1,2 +1,2 @@
-default['zoo_workstation']['nfs_mounts'] = {
+default['workstation']['nfs_mounts'] = {
 }

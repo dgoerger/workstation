@@ -1,4 +1,4 @@
-default['zoo_workstation']['texlive']['packages'] = [
+default['workstation']['texlive']['packages'] = [
   'latexila',
   'lyx',
   'texlive-collection-basic',

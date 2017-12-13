@@ -1,4 +1,4 @@
-default['zoo_workstation']['database']['packages'] = [
+default['workstation']['database']['packages'] = [
   'mariadb-devel',
   'mariadb-server',
   'postgresql-devel',

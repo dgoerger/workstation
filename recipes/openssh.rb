@@ -39,4 +39,4 @@ cron 'patch_openssh' do
   action :create
 end
 
-include_recipe 'zoo_workstation::duo' unless node['zoo_workstation']['duo']['api_host'].empty? || node['zoo_workstation']['duo']['ikey'].empty? || node['zoo_workstation']['duo']['skey'].empty?
+include_recipe 'workstation::duo' unless node['workstation']['duo']['api_host'].empty? || node['workstation']['duo']['ikey'].empty? || node['workstation']['duo']['skey'].empty?

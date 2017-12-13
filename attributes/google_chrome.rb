@@ -1,1 +1,1 @@
-default['zoo_workstation']['google_chrome']['install'] = false
+default['workstation']['google_chrome']['install'] = false

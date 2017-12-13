@@ -1,4 +1,4 @@
-default['zoo_workstation']['emacs']['plugins'] = [
+default['workstation']['emacs']['plugins'] = [
   'emacs-auto-complete',
   'emacs-color-theme',
   'emacs-evil',

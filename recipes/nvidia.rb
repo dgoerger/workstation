@@ -1,9 +1,9 @@
 ### installs and configures the NVIDIA proprietary driver, CUDA, etc
 
 # enable additional repos
-include_recipe 'zoo_workstation::rpmfusion'
-include_recipe 'zoo_workstation::zoo_repo'
-include_recipe 'zoo_workstation::dkms'
+include_recipe 'workstation::rpmfusion'
+include_recipe 'workstation::zoo_repo'
+include_recipe 'workstation::dkms'
 execute 'enable_NVIDIA' do
   # enable Negativo17's NVIDIA repo for CUDA et al - REQUIRES RPMFUSION
   command 'dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo'
@@ -12,7 +12,7 @@ execute 'enable_NVIDIA' do
 end
 
 # install NVIDIA driver
-node['zoo_workstation']['nvidia']['packages'].each do |pkg|
+node['workstation']['nvidia']['packages'].each do |pkg|
   dnf_package pkg do
     action :install
   end
@@ -34,5 +34,5 @@ cookbook_file '/etc/modprobe.d/nvidia-installer-disable-nouveau.conf' do
   action :create
 end
 
-include_recipe 'zoo_workstation::selinux_disable'
-include_recipe 'zoo_workstation::pgi'
+include_recipe 'workstation::selinux_disable'
+include_recipe 'workstation::pgi'

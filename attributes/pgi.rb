@@ -1,2 +1,2 @@
-default['zoo_workstation']['pgi']['pkg_url'] = ''
-default['zoo_workstation']['pgi']['sha256'] = ''
+default['workstation']['pgi']['pkg_url'] = ''
+default['workstation']['pgi']['sha256'] = ''

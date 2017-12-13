@@ -1,4 +1,4 @@
-default['zoo_workstation']['utils']['packages'] = [
+default['workstation']['utils']['packages'] = [
   'alpine',
   'ansible',
   'ansible-inventory-grapher',

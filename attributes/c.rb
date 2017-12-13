@@ -1,4 +1,4 @@
-default['zoo_workstation']['c']['packages'] = [
+default['workstation']['c']['packages'] = [
   # x86_64
   'apr-util',
   'clang',
@@ -11,6 +11,7 @@ default['zoo_workstation']['c']['packages'] = [
   'gcc-go',
   'gcc-objc',
   'gcc-objc++',
+  'indent',
   'llvm-static',
   # i686
   'glibc-devel.i686',

@@ -14,11 +14,11 @@ execute 'extract_pgi_installer' do
 end
 
 remote_file '/var/tmp/pgi.tar.gz' do
-  source node['zoo_workstation']['pgi']['pkg_url']
+  source node['workstation']['pgi']['pkg_url']
   owner 'root'
   group 'root'
   mode '0444'
-  checksum node['zoo_workstation']['pgi']['sha256']
+  checksum node['workstation']['pgi']['sha256']
   action :create
   not_if { File.exist?('/opt/pgi') }
   notifies :run, 'execute[extract_pgi_installer]', :immediately
