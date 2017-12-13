@@ -48,6 +48,11 @@ cron 'patch_firefox' do
   action :create
 end
 
+## tor-browser
+package 'torbrowser-launcher' do
+  action :install
+end
+
 ## lynx
 package 'lynx' do
   action :install
