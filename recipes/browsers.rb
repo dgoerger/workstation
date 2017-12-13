@@ -32,11 +32,6 @@ package 'firefox' do
   action :install
 end
 
-#package 'gstreamer1-plugins-bad-free' do
-#  # media support
-#  action :install
-#end
-
 cookbook_file '/etc/firefox/pref/user.js' do
   # set default conf for new profiles
   source 'firefox.js'

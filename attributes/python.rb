@@ -31,7 +31,7 @@ default['workstation']['python']['packages'] = [
   'python3-ipython-doc',
   'python3-ipython-sphinx',
   'python3-ipython-tests',
-  #'python3-Keras',
+  #'python3-Keras',#TODO
   'python3-nbsphinx',
   'python3-nltk',
   'python3-notebook',
@@ -43,7 +43,7 @@ default['workstation']['python']['packages'] = [
   'python3-scikit-image',
   'python3-scikit-learn',
   'python3-seaborn',
-  #'python3-spacy',
+  #'python3-spacy',#TODO
   'python3-spyder',
   'python3-sympy',
   'python3-theano',
