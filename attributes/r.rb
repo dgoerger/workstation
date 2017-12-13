@@ -36,8 +36,6 @@ default['workstation']['r']['packages'] = [
   'R-GenomicFeatures',
   'R-GenomicRanges',
   'R-ggplot2',
-  #'R-gtools',#TODO
-  #'R-hash',#TODO
   'R-hgu133acdf',
   'R-hgu95av2cdf',
   'R-hgu95av2probe',
