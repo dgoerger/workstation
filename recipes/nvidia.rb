@@ -4,6 +4,7 @@
 include_recipe 'workstation::rpmfusion'
 include_recipe 'workstation::zoo_repo'
 include_recipe 'workstation::dkms'
+
 execute 'enable_NVIDIA' do
   # enable Negativo17's NVIDIA repo for CUDA et al - REQUIRES RPMFUSION
   command 'dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo'
@@ -23,15 +24,6 @@ execute 'configure_nvidia' do
   command 'nvidia-xconfig && dkms autoinstall'
   action :run
   only_if { File.exist?('/usr/lib64/nvidia/xorg') && ! File.exist?('/etc/X11/xorg.conf') }
-end
-
-cookbook_file '/etc/modprobe.d/nvidia-installer-disable-nouveau.conf' do
-  # block the nouveau driver here too
-  source 'nvidia-installer-disable-nouveau.conf'
-  owner 'root'
-  group 'root'
-  mode '0444'
-  action :create
 end
 
 include_recipe 'workstation::selinux_disable'
