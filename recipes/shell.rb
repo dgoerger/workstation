@@ -22,6 +22,11 @@ file '/etc/profile.d/PackageKit.sh' do
   action :delete
 end
 
+file '/etc/profile.d/which2.sh' do
+  # bashism
+  action :delete
+end
+
 # set this up so it copies ~/.ssh for new users, with the correct permissions
 directory '/etc/skel/.ssh' do
   owner 'root'
