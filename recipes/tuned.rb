@@ -9,7 +9,7 @@ service 'tuned' do
   action [ :enable, :start ]
 end
 
-template '/etc/tuned/active_profile' do
+template '/etc/tuned/recommend.conf' do
   # this appears to cut down on valgrind times by ~20%
   source 'tuned_profile.erb'
   owner 'root'
