@@ -21,6 +21,7 @@ default['workstation']['gnome']['packages'] = [
   # misc (GNOME is default)
   'abiword',
   'dia',
+  'flatpak',
   'focuswriter',
   'freemind',
   'ghostwriter',
