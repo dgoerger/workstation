@@ -9,7 +9,7 @@ default['workstation']['devel']['packages'] = [
   'binutils-devel',
   'blas-devel',
   'boost-devel',
-  #'botan-devel',# doesn't support openssl 1.1.x as of 20170706 TODO
+  'botan-devel',
   'bzip2-devel',
   'cairo-devel',
   'cairo-gobject-devel',
