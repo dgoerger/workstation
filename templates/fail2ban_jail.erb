@@ -1,0 +1,10 @@
+[DEFAULT]
+# ban for 30 days
+bantime = 2592000
+# only block IPs - don't mail about it
+action = %(action_)s
+# don't ban these IPs
+ignoreip = <%= node['workstation']['fail2ban']['ignoreips'] -%>
+
+[sshd]
+enabled = true
