@@ -61,6 +61,7 @@ include_recipe 'workstation::utils'
 include_recipe 'workstation::video_editing'
 include_recipe 'workstation::vim'
 include_recipe 'workstation::xfce'
+include_recipe 'workstation::xvnc'
 
 ## proprietary software
 include_recipe 'workstation::chef' # this is mostly open source but is not in the repos
