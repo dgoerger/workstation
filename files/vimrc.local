@@ -18,6 +18,7 @@ if has("autocmd")
   autocmd FileType make setlocal tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
   " indentation is tab/width=8,4 in C's KNF style
   autocmd FileType c setlocal tabstop=8 shiftwidth=8 softtabstop=4 noexpandtab
+  autocmd FileType cpp setlocal tabstop=8 shiftwidth=8 softtabstop=4 noexpandtab
   " indentation is two spaces in Ruby
   autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
   " indentation for shell scripts
