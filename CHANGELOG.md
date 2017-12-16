@@ -1,7 +1,22 @@
 Changelog
 =========
 
-2.0.0 - August 2017
+27.0 - unreleased
+-----------------
+
+- versioning rebase: cookbook releases now correspond with Fedora releases
+- BREAKING CHANGE: [replace denyhosts with fail2ban](https://github.com/dgoerger/workstation/issues/1)
+- [support VNC as additional remote desktop option](https://github.com/dgoerger/workstation/issues/21) - previously we only supported the proprietary FastX
+- [replace AT&T ksh with OpenBSD ksh](https://github.com/dgoerger/workstation/issues/6)
+- [manage system-level crypto policies](https://github.com/dgoerger/workstation/issues/22) `man 8 update-crypto-policies`
+- BREAKING CHANGE: [upgrade Botan major version 1->2](https://github.com/dgoerger/workstation/issues/2)
+- [support Java 9](https://fedoraproject.org/wiki/Changes/Java9TechPreview)
+- [support Flatpak](https://github.com/dgoerger/workstation/issues/19)
+- [OpenSSH adheres to system-level crypto policy](https://github.com/dgoerger/workstation/issues/3)
+- [OpenSSH no-longer supports protocol version 1](https://fedoraproject.org/wiki/Changes/Remove_SSH-1_from_OpenSSH)
+
+
+2.0 - August 2017
 -------------------
 
 - upgrade to [Fedora 26](https://fedoraproject.org/wiki/Releases/26/ChangeSet) from Fedora 24
