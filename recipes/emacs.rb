@@ -17,3 +17,8 @@ unless node['workstation']['emacs']['plugins'].empty?
     end
   end
 end
+
+# mg == OpenBSD's lightweight emacs-compatible editor
+package 'mg' do
+  action :install
+end
