@@ -33,10 +33,6 @@ if curl -Lo "${SRC}" "${UPSTREAM_HOSTS_FILE}" 2>/dev/null; then
       if [ -f /etc/rc.d/unbound ]; then
         /etc/rc.d/unbound restart 2>/dev/null
       # Linux with systemd
-      elif systemctl is-enabled dnssec-triggerd; then
-        # if Unbound is started by dnssec-triggerd, we have to do this dance (F27)
-        pkill unbound
-        systemctl restart dnssec-triggerd 2>/dev/null
       elif systemctl is-enabled unbound; then
         systemctl restart unbound 2>/dev/null
       fi
