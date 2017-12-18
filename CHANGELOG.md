@@ -10,6 +10,7 @@ Changelog
 - [replace AT&T ksh with OpenBSD ksh](https://github.com/dgoerger/workstation/issues/6)
 - [manage system-level crypto policies](https://github.com/dgoerger/workstation/issues/22) `man 8 update-crypto-policies`
 - BREAKING CHANGE: [upgrade Botan major version 1->2](https://github.com/dgoerger/workstation/issues/2)
+- [local dns cache dnsmasq -> unbound + dnssec validation via dnssec-triggerd](https://fedoraproject.org/wiki/Features/DNSSEC_on_workstations)
 - [support Java 9](https://fedoraproject.org/wiki/Changes/Java9TechPreview)
 - [support Flatpak](https://github.com/dgoerger/workstation/issues/19)
 - [OpenSSH adheres to system-level crypto policy](https://github.com/dgoerger/workstation/issues/3)
