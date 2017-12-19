@@ -10,7 +10,7 @@ default['workstation']['nvidia']['packages'] = [
   'cuda-devel',
   'cuda-cli-tools',
   'cuda-docs',
-  #'cuda-samples',#TODO
+  'cuda-samples',
   'cuda-cublas-devel',
   'cuda-cudart-devel',
   'cuda-cufft-devel',
