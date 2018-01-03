@@ -6,5 +6,5 @@ socket_type = stream
 wait = no
 user = nobody
 server = /usr/bin/Xvnc
-server_args = -inetd -query localhost -once -geometry 800x600 -depth 24 securitytypes=none
+server_args = -inetd -query localhost -once -geometry 1200x900 -depth 24 securitytypes=none
 }
