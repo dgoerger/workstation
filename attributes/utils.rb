@@ -10,6 +10,7 @@ default['workstation']['utils']['packages'] = [
   'bsdtar',# better than gnutar
   'calc',
   'calcurse',
+  'calendar',
   'clinfo',
   'csslint',
   'cyrus-sasl-plain',# needed by mutt for imaps/smtps auth
