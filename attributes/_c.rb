@@ -3,6 +3,7 @@ default['workstation']['c']['packages'] = [
   'apr-util',
   'clang',
   'clang-analyzer',
+  'clang-tools-extra',
   'cpp',
   'csclng',
   'gcc',
@@ -13,15 +14,15 @@ default['workstation']['c']['packages'] = [
   'gcc-objc++',
   'indent',
   'llvm-static',
-  # i686
-  'glibc-devel.i686',
-  'libgcc.i686',
-  # arm64
-  'arm-none-eabi-gcc-cs-c++',
-  'arm-none-eabi-gcc-cs',
-  'arm-none-eabi-newlib',
+#  # i686
+#  'glibc-devel.i686',
+#  'libgcc.i686',
+#  # arm64
+#  'arm-none-eabi-gcc-cs-c++',
+#  'arm-none-eabi-gcc-cs',
+#  'arm-none-eabi-newlib',
   # debuggers
-  'ddd',
   'dwz',
+  'gdb',
   'gdb-gdbserver'
 ]
