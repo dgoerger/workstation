@@ -38,9 +38,9 @@ AcceptEnv XMODIFIERS
 # override default of no subsystems
 Subsystem sftp /usr/libexec/openssh/sftp-server
 
-<% unless node['workstation']['openssh']['enable_password_auth_cidr'].empty? -%>
+<% unless node['workstation']['_openssh']['enable_password_auth_cidr'].empty? -%>
 # enable password-based authentication for connections originating from authorized subnets
-<%   node['workstation']['openssh']['enable_password_auth_cidr'].each do |cidr| -%>
+<%   node['workstation']['_openssh']['enable_password_auth_cidr'].each do |cidr| -%>
 Match Address <%= cidr %>
 PasswordAuthentication yes
 # publickey OR password

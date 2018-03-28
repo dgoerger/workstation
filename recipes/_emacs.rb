@@ -1,10 +1,5 @@
 ### installs and configures emacs
 
-package 'emacs-nox' do
-  # cli
-  action :install
-end
-
 package 'emacs' do
   # gui
   action :install
@@ -16,9 +11,4 @@ unless node['workstation']['emacs']['plugins'].empty?
       action :install
     end
   end
-end
-
-# mg == OpenBSD's lightweight emacs-compatible editor
-package 'mg' do
-  action :install
 end

@@ -7,9 +7,6 @@ package 'nvi' do
 end
 
 # Vim
-package 'vim-enhanced' do
-  action :install
-end
 package 'vim-X11' do
   # gui vim
   action :install
