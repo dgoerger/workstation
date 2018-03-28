@@ -1,12 +1,12 @@
 Name:		racket
 Version:	6.12
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Racket is a full-spectrum programming language
 
 Group:		Development/Languages
 License:	LGPLv3
-URL:		http://racket-lang.org
-Source0:	http://mirror.racket-lang.org/installers/%{version}/%{name}-%{version}-src.tgz
+URL:		https://racket-lang.org
+Source0:	https://mirror.racket-lang.org/installers/%{version}/%{name}-%{version}-src.tgz
 
 # fix rpath issue with executables
 BuildRequires:	chrpath
@@ -103,8 +103,9 @@ update-desktop-database &> /dev/null || :
 %{_libdir}/*.so
 
 %changelog
-* Wed Mar 28 2018 David Goerger - 6.12-1
+* Wed Mar 28 2018 David Goerger - 6.12-2
 - update to 6.12
+- switch url to HTTPS
 
 * Sun Nov 19 2017 David Goerger - 6.11-1
 - update to 6.11
