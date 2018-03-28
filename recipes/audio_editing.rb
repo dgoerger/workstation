@@ -10,4 +10,4 @@ unless node['workstation']['audio_editing']['packages'].empty?
   end
 end
 
-include_recipe 'workstation::jackd'
+include_recipe 'workstation::_jackd'

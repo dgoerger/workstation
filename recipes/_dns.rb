@@ -1,10 +1,6 @@
 ### installs and configures unbound and dnssec-trigger
 
-package 'unbound' do
-  action :install
-end
-
-package 'dnssec-trigger' do
+package %w(unbound dnssec-trigger) do
   action :install
 end
 
