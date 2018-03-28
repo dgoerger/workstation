@@ -1,10 +1,25 @@
 # Chef Cookbook: workstation
 
+## WARNING
+Version 3.x.y is a work in progress. The codebase is undergoing a major
+restructuring in order to provide software for specific use cases (roles) as
+opposed to separating package installation by programming language.
+
+I'm targeting early summer 2018 to finish this refactoring. In the interim,
+unless you're brave and like to live on the edge of a potentially broken
+codebase, please stick with 2.x.y.
+
 ## Objective
 
-Configure a general-purpose Fedora Linux workstation, including everything from common desktop applications to development libraries for university-level courses, machine learning, and beyond!
+Configure a general-purpose Fedora Linux workstation, including everything from
+common desktop applications to development libraries for university-level
+courses, machine learning, and beyond!
 
-This cookbook should remain usable *without* a Chef Server, and without a [wrapper cookbook](https://blog.chef.io/2017/02/14/writing-wrapper-cookbooks/). Full functionality (attribute overrides, etc) can be set up via either of these methods, however, by default this cookbook should remain usable leveraging Chef Solo or a tool such as [Chake](https://github.com/terceiro/chake).
+This cookbook should remain usable *without* a Chef Server, and without a
+[wrapper cookbook](https://blog.chef.io/2017/02/14/writing-wrapper-cookbooks/).
+Full functionality (attribute overrides, etc) can be set up via either of these
+methods, however, by default this cookbook should remain usable leveraging Chef
+Solo or a tool such as [Chake](https://github.com/terceiro/chake).
 
 ## Supported Platforms
 
