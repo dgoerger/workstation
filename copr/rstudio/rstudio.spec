@@ -1,6 +1,6 @@
 %global version_major 1
 %global version_minor 1
-%global version_patch 383
+%global version_patch 442
 
 %global co_date 20160730
 %global gin_ver 1.5
@@ -272,6 +272,9 @@ fi
 
 
 %changelog
+* Wed Mar 28 2018 David Goerger - 1.1.442-1
+- update to 1.1.442
+
 * Mon Nov 27 2017 David Goerger - 1.1.383-1
 - update to 1.1.383
 
