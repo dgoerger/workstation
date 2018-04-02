@@ -7,8 +7,6 @@ Group:          Applications/Internet
 License:        MIT
 URL:            https://newsboat.org/
 Source0:        https://newsboat.org/releases/%{version}/%{name}-%{version}.tar.xz
-# docs aren't build by default, see https://github.com/newsboat/newsboat/issues/66
-Patch0:         newsboat-builddocs.patch
 
 BuildRequires:  asciidoc
 BuildRequires:  gettext
@@ -32,7 +30,6 @@ keyboard.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 export CXXFLAGS="%{optflags}"
