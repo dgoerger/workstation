@@ -1,4 +1,3 @@
-# Created by pyp2rpm-3.1.3
 %global pypi_name tensorflow
 
 Name:           python-%{pypi_name}
@@ -52,8 +51,11 @@ rm -rf %{buildroot}/%{python3_sitelib}/external
 %check
 
 %files -n python3-%{pypi_name}
+%{_bindir}/freeze_graph
 %{_bindir}/saved_model_cli
 %{_bindir}/tensorboard
+%{_bindir}/toco
+%{_bindir}/toco_from_protos
 %{python3_sitelib}/%{pypi_name}*
 
 
