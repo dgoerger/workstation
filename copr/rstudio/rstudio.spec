@@ -31,7 +31,6 @@ Source8:        https://github.com/rstudio/shinyapps/archive/master.zip#/shinyap
 Source9:        https://github.com/rstudio/rsconnect/archive/master.zip#/rsconnect-%{co_date}.zip
 
 Patch0:         %{name}-%{version}-dependencies.patch
-Patch1:         %{name}-%{version}-openssl_1_1_0.patch
 Patch3:         %{name}-%{version}-sysmacros.patch
 
 BuildRequires:  ant
@@ -131,7 +130,6 @@ This package provides the server edition.
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1
-%patch1 -p1
 %patch3 -p1
 
 # copy in additional resources
