@@ -24,7 +24,7 @@ modern, robust shell good for interactive and especially script use, being a
 bourne shell replacement, pdksh successor and an alternative to the C shell.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n loksh-%{version}
 
 %build
 make %{?_smp_mflags}
