@@ -10,8 +10,8 @@ Summary:          Create Elegant Data Visualisations Using the Grammar of Graphi
 
 Group:            Applications/Engineering 
 License:          GPL-2 | file LICENSE
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
+Source0:          https://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 BuildRoot:        %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 # tbh lazy deps resolution == all R packages that are installed on a working system, regardless of if necessary
