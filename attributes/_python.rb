@@ -21,7 +21,6 @@ default['workstation']['python']['packages'] = [
   'python2-virtualenv-clone',
   'python-virtualenvwrapper',
   'python-webpy',
-  'python2-yahoo-finance',
   'python3-beautifulsoup4',
   'python3-botan2',
   'python3-crypto',
@@ -54,7 +53,6 @@ default['workstation']['python']['packages'] = [
   'python3-virtualenv',
   'python3-virtualenv-api',
   'python3-virtualenv-clone',
-  'python3-yahoo-finance',
 #  # zipline has ancient unresolvable deps:
 #  # - numpy 1.11.1 vs 1.12.1
 #  # - scipy 0.17.1 vs 0.19.1
