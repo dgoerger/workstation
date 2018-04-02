@@ -9,7 +9,7 @@ Summary:        TensorFlow helps the tensors flow
 License:        Apache 2.0
 URL:            http://tensorflow.org/
 # https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package
-Source0:        https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}-cp36-cp36m-linux_x86_64.whl
+Source0:        https://storage.googleapis.com/tensorflow/linux/cpu/%{pypi_name}-%{version}-cp36-cp36m-linux_x86_64.whl
 BuildArch:      x86_64
  
 BuildRequires:  python3-setuptools
