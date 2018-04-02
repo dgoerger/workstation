@@ -59,7 +59,7 @@ find contrib/ -type f -exec chmod -x '{}' ';'
 
 
 %changelog
-* Wed Mar 28 2017 David Goerger - 2.11-1
+* Wed Mar 28 2018 David Goerger - 2.11-1
 - update to 2.11
 
 * Sun Dec 03 2017 David Goerger - 2.10.1-1
