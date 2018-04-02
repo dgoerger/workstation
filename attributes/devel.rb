@@ -9,7 +9,7 @@ default['workstation']['devel']['packages'] = [
   'binutils-devel',
   'blas-devel',
   'boost-devel',
-  'botan-devel',
+  'botan2-devel',
   'bzip2-devel',
   'cairo-devel',
   'cairo-gobject-devel',
