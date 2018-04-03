@@ -7,7 +7,7 @@
 Name:             R-%{packname}
 Version:          2.4.3
 Release:          2%{?dist}
-Source0:          https://cran.r-project.org/pub/R/contrib/main/%{packname}_%{version}.tar.gz
+Source0:          https://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 Patch0:           swirl_userdata.patch
 License:          GPLv2+
 URL:              https://cran.r-project.org/web/packages/swirl/index.html
