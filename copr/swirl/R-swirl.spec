@@ -39,8 +39,10 @@ test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
 rm -rf $RPM_BUILD_ROOT%{_libdir}/R/library/R.css
 
 # copy in courses
-unzip -d %{buildroot}/tmp/%{coursesdir} %{_builddir}/%{packname}/swirl_courses.zip
-mv %{buildroot}/tmp/%{coursesdir} %{buildroot}%{_libdir}/R/library/%{packname}/%{coursesdir}
+unzip -d %{buildroot}/tmp %{_builddir}/%{packname}/swirl_courses.zip
+rm -rf %{buildroot}%{_libdir}/R/library/%{packname}/%{coursesdir}
+mv %{buildroot}/tmp/swirl_courses-master %{buildroot}%{_libdir}/R/library/%{packname}/%{coursesdir}
+rm %{buildroot}%{_libdir}/R/library/%{packname}/%{coursesdir}/.gitignore
 
 %check
 # needed to pass the test-encoding
