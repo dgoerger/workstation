@@ -14,9 +14,9 @@ URL:              https://cran.r-project.org/web/packages/swirl/index.html
 Group:            Applications/Engineering
 Summary:          Interactive learning environment for R
 BuildRequires:    R-devel, unzip
-BuildRequires:    R-RCurl, R-digest, R-testthat, R-stringr, R-httr, R-yaml
+BuildRequires:    R-RCurl, R-digest, R-testthat, R-stringr, R-httr, R-yaml, R-R6
 BuildRoot:        %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires:         R-RCurl, R-digest, R-testthat, R-stringr, R-httr, R-yaml
+Requires:         R-RCurl, R-digest, R-testthat, R-stringr, R-httr, R-yaml, R-R6
 
 %description
 R interface to swirl. swirl is a software package for the R programming
