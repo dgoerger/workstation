@@ -51,7 +51,7 @@ pip3 install --no-deps --disable-pip-version-check -I %{SOURCE0} --root %{buildr
 rm -rf %{buildroot}/%{python3_sitelib}/external
 # fix for wheel package weirdness installing to inconsistent package/directory names ("tensorflow" versus "tensorflow-gpu" versus "tensorflow_gpu")
 mv %{buildroot}/%{python3_sitearch}/%{pypi_name}_gpu-%{version}.dist-info %{buildroot}/%{python3_sitelib}/%{pypi_name}-%{version}.dist-info
-sed -i "s/tensorflow-gpu/tensorflow/" %{buildroot}/%{python2_sitelib}/%{pypi_name}-%{version}.dist-info/metadata.json
+sed -i "s/tensorflow-gpu/tensorflow/" %{buildroot}/%{python3_sitelib}/%{pypi_name}-%{version}.dist-info/metadata.json
 
 %check
 
