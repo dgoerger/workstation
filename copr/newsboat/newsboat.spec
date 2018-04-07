@@ -1,5 +1,5 @@
 Name:           newsboat
-Version:        2.11
+Version:        2.11.1
 Release:        1%{?dist}
 Summary:        Configurable text-based feed reader
 
