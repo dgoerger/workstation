@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:     zotero
-Version:  5.0.43
+Version:  5.0.44
 Release:  1%{?dist}
 Summary:  Collect, organize, cite, and share research sources
 License:  AGPLv3
