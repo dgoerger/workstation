@@ -8,11 +8,11 @@
 # mv sc3-plugins sc3-plugins-src-${GHASH}
 # tar cvzf sc3-plugins-src-${GHASH}.tar.gz sc3-plugins-src-${GHASH}
 #
-# 2017.08.03: Version-3.7.1-134-g8352b26
+# 2018.04.07: Version-3.7.1-169-g9307b41
 #
 %define gitver 3.7.1
-%define gittag g8352b26
-%define gitrev 134
+%define gittag g9307b41
+%define gitrev 169
 
 Summary: Collection of SuperCollider plugins
 Name: supercollider-sc3-plugins
@@ -80,6 +80,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/SuperCollider/plugins/*
 
 %changelog
+* Sat Apr 07 2018 David Goerger - 3.7.1-169-g9307b41
+- update to 3.7.1-169-g9307b41
+
 * Fri Nov 25 2016 Fernando Lopez-Lezcano <nando@ccrma.stanford.edu> 3.7.1-1.102.gf1200cd
 - update to latest git for 3.7.2 release
 - bbcut2 is now part of sc3 plugins
