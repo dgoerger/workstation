@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:     zotero
-Version:  5.0.44
+Version:  5.0.45
 Release:  1%{?dist}
 Summary:  Collect, organize, cite, and share research sources
 License:  AGPLv3
@@ -38,6 +38,9 @@ install -Dm644 %{buildroot}/%{_libdir}/%{name}/chrome/icons/default/default256.p
 
 
 %changelog
+* Mon Apr 30 2018 David Goerger - 5.0.45-1
+- update to 5.0.45
+
 * Tue Apr 03 2018 David Goerger - 5.0.43-1
 - update to 5.0.43
 
