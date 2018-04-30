@@ -3,7 +3,7 @@
 
 Summary: ghostwriter: A cross-platform, aesthetic, distraction-free Markdown editor
 Name: ghostwriter
-Version: 1.5.0
+Version: 1.6.2
 Release: 1%{?dist}
 License: GPLv3+
 Group: Development/Tools
@@ -45,6 +45,9 @@ make install
 %doc COPYING CREDITS.md
 
 %changelog
+* Mon Apr 30 2018 David Goerger - 1.6.2-1
+- update to 1.6.2
+
 * Sun Nov 19 2017 David Goerger - 1.5.0-1
 - update to 1.5.0
 
