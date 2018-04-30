@@ -3,14 +3,14 @@
 Summary:          OpenBSD's Korn Shell
 Name:             ksh
 Epoch:            1
-Version:          6.2
+Version:          6.3
 Release:          1%{?dist}
 License:          ISC
 Group:            System Environment/Shells
-URL:              https://github.com/dimkr/loksh
-Source0:          https://github.com/dimkr/loksh/archive/%{version}.tar.gz
+URL:              https://github.com/ibara/oksh
+Source0:          https://github.com/ibara/oksh/archive/OpenBSD-%{version}.tar.gz
 Conflicts:        filesystem < 3
-Provides:         /bin/ksh, /bin/oksh
+Provides:         /bin/ksh
 Requires(post):   grep
 Requires(postun): sed
 BuildRequires:    util-linux, ed
@@ -24,7 +24,8 @@ modern, robust shell good for interactive and especially script use, being a
 bourne shell replacement, pdksh successor and an alternative to the C shell.
 
 %prep
-%setup -q -n loksh-%{version}
+%setup -q -n oksh-OpenBSD-%{version}
+./configure --prefix=/usr --mandir=%{_mandir} --enable-ksh
 
 %build
 make %{?_smp_mflags}
@@ -32,12 +33,8 @@ make %{?_smp_mflags}
 %install
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
-rm -f %{buildroot}/%{_mandir}/man1/sh.1.gz
-mv %{buildroot}/%{_docdir}/loksh %{buildroot}/%{_docdir}/%{name}
-mv %{buildroot}/%{_docdir}/%{name}/PROJETCS %{buildroot}/%{_docdir}/%{name}/PROJECTS
 
 %check
-rm -f %{buildroot}/%{_mandir}/man1/sh.1.gz
 
 %post
 %if 0%{?fedora} >= 17 || 0%{?rhel} >= 7
@@ -60,10 +57,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc CONTRIBUTORS LEGAL PROJECTS README README.upstream
+%doc CONTRIBUTORS LEGAL PROJECTS README.md README.pdksh
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Mon Apr 30 2018 David Goerger - 6.3-1
+- update to 6.3
+
 * Sun Dec 10 2017 David Goerger - 6.2-1
 - initial packaging of oksh
