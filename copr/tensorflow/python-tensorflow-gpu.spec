@@ -51,7 +51,6 @@ pip3 install --no-deps --disable-pip-version-check -I %{SOURCE0} --root %{buildr
 rm -rf %{buildroot}/%{python3_sitelib}/external
 # fix for wheel package weirdness installing to inconsistent package/directory names ("tensorflow" versus "tensorflow-gpu" versus "tensorflow_gpu")
 mv %{buildroot}/%{python3_sitearch}/%{pypi_name}_gpu-%{version}.dist-info %{buildroot}/%{python3_sitelib}/%{pypi_name}-%{version}.dist-info
-sed -i "s/tensorflow-gpu/tensorflow/" %{buildroot}/%{python3_sitelib}/%{pypi_name}-%{version}.dist-info/metadata.json
 
 %check
 
@@ -65,6 +64,9 @@ sed -i "s/tensorflow-gpu/tensorflow/" %{buildroot}/%{python3_sitelib}/%{pypi_nam
 
 
 %changelog
+* Mon Apr 30 2018 David Goerger - 1.8.0-1
+- update to 1.8.0
+
 * Mon Apr 02 2018 David Goerger - 1.7.0-1
 - update to 1.7.0
 - deprecate python2 flavour
