@@ -1,7 +1,7 @@
 %global pypi_name tensorflow
 
 Name:           python-%{pypi_name}-gpu
-Version:        1.7.0
+Version:        1.8.0
 Release:        1%{?dist}
 Summary:        TensorFlow helps the tensors flow
 
