@@ -10,6 +10,8 @@
 #     include this file and set the proper runlevel etc.
 
 ### software installation
+## additional repos - FOSS-only
+include_recipe 'workstation::_repo'
 ## Free and Open Source Software
 include_recipe 'workstation::_c'
 include_recipe 'workstation::_crypto_policy'
