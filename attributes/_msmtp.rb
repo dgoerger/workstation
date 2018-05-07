@@ -1,3 +1,3 @@
-default['workstation']['msmtp']['smarthost'] = ''
-default['workstation']['msmtp']['port'] = ''
-default['workstation']['msmtp']['domain'] = ''
+default['workstation']['_msmtp']['smarthost'] = ''
+default['workstation']['_msmtp']['port'] = ''
+default['workstation']['_msmtp']['domain'] = ''

@@ -19,9 +19,9 @@ export LESSHISTFILE=-
 umask <%= node['workstation']['shell']['umask'] -%>
 <% end -%>
 
-<% unless node['workstation']['msmtp']['domain'].empty? -%>
+<% unless node['workstation']['_msmtp']['domain'].empty? -%>
 # set sensible default GIT env vars
-export GIT_AUTHOR_EMAIL="${LOGNAME}@<%= node['workstation']['msmtp']['domain'] -%>"
+export GIT_AUTHOR_EMAIL="${LOGNAME}@<%= node['workstation']['_msmtp']['domain'] -%>"
 export GIT_AUTHOR_NAME="$(getent passwd $LOGNAME | cut -d: -f5 | cut -d, -f1)"
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
