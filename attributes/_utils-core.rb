@@ -1,4 +1,4 @@
-default['workstation']['utils-core']['packages'] = [
+default['workstation']['_utils-core']['packages'] = [
   # editors
   'emacs-nox',# GNU Emacs cli
   'hunspell-en',
