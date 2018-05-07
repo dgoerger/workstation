@@ -1,6 +1,6 @@
 # fetch api info from a Duo admin
-default['workstation']['duo']['api_host'] = ''
-default['workstation']['duo']['ikey'] = ''
-default['workstation']['duo']['skey'] = ''
+default['workstation']['_duo']['api_host'] = ''
+default['workstation']['_duo']['ikey'] = ''
+default['workstation']['_duo']['skey'] = ''
 # enable Duo for SSH?
-default['workstation']['duo']['ssh'] = false
+default['workstation']['_duo']['ssh'] = false

@@ -13,7 +13,7 @@ PubkeyAuthentication yes
 AuthorizedKeysFile .ssh/authorized_keys
 PermitEmptyPasswords no
 PasswordAuthentication no
-<% if node['workstation']['duo']['ssh'] -%>
+<% if node['workstation']['_duo']['ssh'] -%>
 ChallengeResponseAuthentication yes
 # publickey OR password+duo
 AuthenticationMethods publickey keyboard-interactive:pam
