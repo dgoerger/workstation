@@ -5,15 +5,15 @@ config_file_version = 2
 reconnection_retries = 3
 sbus_timeout = 30
 services = nss, pam
-domains = <%= node['workstation']['sssd']['domain'] %>
+domains = <%= node['workstation']['_sssd']['domain'] %>
 
 [nss]
-filter_users = <%= node['workstation']['sssd']['filter_users'] %>
-filter_groups = <%= node['workstation']['sssd']['filter_groups'] %>
+filter_users = <%= node['workstation']['_sssd']['filter_users'] %>
+filter_groups = <%= node['workstation']['_sssd']['filter_groups'] %>
 
 [pam]
 
-[domain/<%= node['workstation']['sssd']['domain'] -%>]
+[domain/<%= node['workstation']['_sssd']['domain'] -%>]
 debug_level = 4
 
 id_provider = ldap
@@ -24,8 +24,8 @@ ldap_access_order = expire
 ldap_account_expire_policy = ad
 ldap_force_upper_case_realm = true
 
-ldap_user_search_base = <%= node['workstation']['sssd']['ldap_dc'] %>
-ldap_group_search_base = <%= node['workstation']['sssd']['ldap_dc'] %>
+ldap_user_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
+ldap_group_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
 ldap_user_object_class = posixAccount
 ldap_user_name = uid
 ldap_user_fullname = cn
@@ -38,6 +38,6 @@ cache_credentials = false
 # in case users try to log in with their username in all-caps
 case_sensitive = false
 
-ldap_uri = ldaps://<%= node['workstation']['sssd']['ldap_server'] %>
-ldap_search_base = <%= node['workstation']['sssd']['ldap_dc'] %>
+ldap_uri = ldaps://<%= node['workstation']['_sssd']['ldap_server'] %>
+ldap_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
 ldap_tls_reqcert = allow

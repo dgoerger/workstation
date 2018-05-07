@@ -17,13 +17,13 @@ includedir /etc/krb5.conf.d/
  rdns = false
  default_ccache_name = KEYRING:persistent:%{uid}
 
- default_realm = <%= node['workstation']['sssd']['kerberos_realm'] %>
+ default_realm = <%= node['workstation']['_sssd']['kerberos_realm'] %>
 [realms]
- <%= node['workstation']['sssd']['kerberos_realm'] -%> = {
-  kdc = <%= node['workstation']['sssd']['kerberos_server'] %>
-  admin_server = <%= node['workstation']['sssd']['kerberos_server'] %>
+ <%= node['workstation']['_sssd']['kerberos_realm'] -%> = {
+  kdc = <%= node['workstation']['_sssd']['kerberos_server'] %>
+  admin_server = <%= node['workstation']['_sssd']['kerberos_server'] %>
  }
 
 [domain_realm]
- <%= node['workstation']['sssd']['kerberos_realm'] -%> = <%= node['workstation']['sssd']['kerberos_server'] %>
- .<%= node['workstation']['sssd']['kerberos_realm'] -%> = <%= node['workstation']['sssd']['kerberos_server'] %>
+ <%= node['workstation']['_sssd']['kerberos_realm'] -%> = <%= node['workstation']['_sssd']['kerberos_server'] %>
+ .<%= node['workstation']['_sssd']['kerberos_realm'] -%> = <%= node['workstation']['_sssd']['kerberos_server'] %>

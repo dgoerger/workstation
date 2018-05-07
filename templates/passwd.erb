@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Changing password via SMB/Samba..."
-/usr/bin/smbpasswd -r <%= node['workstation']['sssd']['kerberos_server'] -%> -U $USER
+/usr/bin/smbpasswd -r <%= node['workstation']['_sssd']['kerberos_server'] -%> -U $USER
