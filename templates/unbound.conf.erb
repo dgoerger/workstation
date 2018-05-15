@@ -31,7 +31,7 @@ server:
   # .. normally this will fail DNSSEC validation at the root .
   # .. this option is provided for networks which use local
   # .. TLDs not specified or reserved in RFCs for the DNS
-<%   node['_dns']['invalid_tlds'].each |domain| do -%>
+<%   node['_dns']['invalid_tlds'].each do |domain| -%>
 <%=    "  domain-insecure: #{domain}" %>
 <%   end -%>
 <% end -%>
@@ -63,6 +63,6 @@ forward-zone:
 <% if node['_dns']['upstream_tls'] -%>
   forward-tls-upstream: yes
 <% end -%>
-<% node['_dns']['upstreams'].each |resolver| do -%>
+<% node['_dns']['upstreams'].each do |resolver| -%>
 <%=  "  forward-addr: #{resolver}" %>
 <% end -%>
