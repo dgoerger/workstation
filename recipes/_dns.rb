@@ -24,7 +24,7 @@ template '/etc/unbound/unbound.conf' do
   group 'root'
   mode '0444'
   action :create
-  notifies :restart, 'service[dnssec-triggerd]', :delayed
+  notifies :restart, 'service[unbound]', :delayed
 end
 
 # dnsblock - blackhole bad stuff
@@ -41,6 +41,21 @@ cookbook_file '/usr/local/sbin/dnsblock' do
   action :create
   notifies :run, 'execute[dnsblock_initialize]', :delayed
 end
+
+service 'unbound' do
+  supports :restart => true
+  action [ :enable, :start ]
+end
+
+template '/etc/unbound/unbound.conf' do
+  source 'unbound.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0444'
+  action :create
+  notifies :restart, 'service[unbound]', :delayed
+end
+
 
 cron 'dnsblock_update' do
   time :weekly
