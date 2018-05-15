@@ -1,17 +1,12 @@
 ### installs and configures unbound and dnssec-trigger
 
-package %w(unbound dnssec-trigger) do
+package unbound do
   action :install
 end
 
 service 'NetworkManager' do
   supports :reload => true
   action :nothing
-end
-
-service 'dnssec-triggerd' do
-  supports :restart => true
-  action [ :enable, :start ]
 end
 
 template '/etc/NetworkManager/NetworkManager.conf' do
