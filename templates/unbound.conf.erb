@@ -1,59 +1,68 @@
-# Fedora: unbound.conf
+# Fedora: /etc/unbound/unbound.conf
 
 server:
-	# only ephemeral ports are allowed by SElinux
-	outgoing-port-permit: 32768-60999
+  interface: 127.0.0.1
 
-	# SElinux policy does not allow non-ephemeral ports to be used
-	outgoing-port-avoid: 0-32767
+  access-control: 0.0.0.0/0 refuse
+  access-control: 127.0.0.0/8 allow
+  access-control: ::0/0 refuse
+  access-control: ::1 allow
 
-	# use IP_TRANSPARENT so the interface: addresses can be non-local
-	# and you can config non-existing IPs that are going to work later on
-	# (uses IP_BINDANY on FreeBSD).
-	ip-transparent: yes
+  hide-identity: yes
+  hide-version: yes
+  minimal-responses: yes
+  qname-minimisation: yes
 
-	# maximum UDP response size (not applied to TCP response)
-	# 3072 causes +dnssec any isc.org queries to need TC=1. Helps mitigating DDOS
-	max-udp-size: 3072
+  # enable DNSSEC validation
+  chroot: ""
+  auto-trust-anchor-file: "/var/lib/unbound/root.key"
+  module-config: 'validator iterator'
 
-	# If you give "" no chroot is performed. The path must not end in a /.
-	# chroot: "/var/lib/unbound"
-	chroot: ""
+  # SELinux restrictions
+  outgoing-port-avoid: 0-32767
+  outgoing-port-permit: 32768-60999
 
-	# Sent minimum amount of information to upstream servers to enhance
-	# privacy. Only sent minimum required labels of the QNAME and set QTYPE
-	# to NS when possible.
-	qname-minimisation: yes
+  # blackhole bad domains
+  include: /usr/local/etc/unbound/blocklist.conf
 
-	# if yes, Unbound doesn't insert authority/additional sections
-	# into response messages when those sections are not required.
-	minimal-responses: yes
+<% unless node['_dns']['invalid_tlds'].empty? -%>
+  # don't perform DNSSEC validation on known-invalid domain space,
+  # .. e.g. 'fully.qualified.domain.NOT_A_TLD'
+  # .. normally this will fail DNSSEC validation at the root .
+  # .. this option is provided for networks which use local
+  # .. TLDs not specified or reserved in RFCs for the DNS
+<%   node['_dns']['invalid_tlds'].each |domain| do -%>
+<%=    "  domain-insecure: #{domain}" %>
+<%   end -%>
+<% end -%>
 
-	# module configuration of the server. A string with identifiers
-	# separated by spaces. Syntax: "[dns64] [validator] iterator"
-	module-config: "ipsecmod validator iterator"
+<% if node['_dns']['rfc1918_enabled'] -%>
+  # permit reverse lookup of rfc1918 IP space
+  local-zone: "10.in-addr.arpa." transparent
+  local-zone: "16.172.in-addr.arpa." transparent
+  local-zone: "17.172.in-addr.arpa." transparent
+  local-zone: "18.172.in-addr.arpa." transparent
+  local-zone: "19.172.in-addr.arpa." transparent
+  local-zone: "20.172.in-addr.arpa." transparent
+  local-zone: "21.172.in-addr.arpa." transparent
+  local-zone: "22.172.in-addr.arpa." transparent
+  local-zone: "23.172.in-addr.arpa." transparent
+  local-zone: "24.172.in-addr.arpa." transparent
+  local-zone: "25.172.in-addr.arpa." transparent
+  local-zone: "26.172.in-addr.arpa." transparent
+  local-zone: "27.172.in-addr.arpa." transparent
+  local-zone: "28.172.in-addr.arpa." transparent
+  local-zone: "29.172.in-addr.arpa." transparent
+  local-zone: "30.172.in-addr.arpa." transparent
+  local-zone: "31.172.in-addr.arpa." transparent
+  local-zone: "168.192.in-addr.arpa." transparent
+<% end -%>
 
-	# trust anchor signaling sends a RFC8145 key tag query after priming.
-	trust-anchor-signaling: yes
-
-	# File with trusted keys for validation. Specify more than one file
-	# with several entries, one file per entry. Like trust-anchor-file
-	# but has a different file format. Format is BIND-9 style format,
-	# the trusted-keys { name flag proto algo "key"; }; clauses are read.
-	# you need external update procedures to track changes in keys.
-	# trusted-keys-file: ""
-	auto-trust-anchor-file: "/var/lib/unbound/root.key"
-
-	# Fedora: module will be enabled on-demand by libreswan
-	ipsecmod-enabled: no
-
-	# Path to executable external hook. It must be defined when ipsecmod is
-	# listed in module-config (above).
-	ipsecmod-hook:/usr/libexec/ipsec/unbound-hook.py
-
-  # dns blocklist
-  include: /usr/local/etc/blocklist.conf
-
-remote-control:
-  # needed for dnssec-trigger
-  control-enable: yes
+forward-zone:
+  name: "."
+<% if node['_dns']['upstream_tls'] -%>
+  forward-tls-upstream: yes
+<% end -%>
+<% node['_dns']['upstreams'].each |resolver| do -%>
+<%=  "  forward-addr: #{resolver}" %>
+<% end -%>
