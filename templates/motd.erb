@@ -1,10 +1,10 @@
-/* <%= node['workstation']['motd']['greeting'] %>
+/* <%= node['workstation']['_motd']['greeting'] %>
  *
- * <%= node['workstation']['motd']['announcements'] %>
-<% unless node['workstation']['motd']['errata'].empty? -%>
- * <%= node['workstation']['motd']['errata'] %>
+ * <%= node['workstation']['_motd']['announcements'] %>
+<% unless node['workstation']['_motd']['errata'].empty? -%>
+ * <%= node['workstation']['_motd']['errata'] %>
 <% end -%>
 <% unless @reboot_cycle.empty? -%>
- * <%= node['workstation']['motd']['reboot_cycle_text'] -%> <%= @reboot_cycle %>
+ * <%= node['workstation']['_motd']['reboot_cycle_text'] -%> <%= @reboot_cycle %>
 <% end -%>
  */
