@@ -4,6 +4,7 @@ default['workstation']['_utils-core']['packages'] = [
   'hunspell-en',
   'mg',# lightweight OpenBSD emacs clone
   'nano',
+  'nvi',
   'vim-enhanced',# ViM cli
   # mail, news, and chat
   'alpine',

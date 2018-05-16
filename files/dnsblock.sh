@@ -8,7 +8,7 @@ export PATH
 
 TMP='/tmp/unbound'
 SRC='/tmp/hostfile.src'
-CONF_DIR='/usr/local/etc'
+CONF_DIR='/usr/local/etc/unbound'
 BLOCKLIST_FILE="${CONF_DIR}/blocklist.conf"
 
 
