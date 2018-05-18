@@ -49,6 +49,7 @@ default['workstation']['_utils-core']['packages'] = [
   'bind-utils',
   'bsdtar',# better than gnutar
   'calendar',# OpenBSD reminder utility
+  'cowsay',
   'hnb',
   'kernel-modules-extra',
   'kpcli',
