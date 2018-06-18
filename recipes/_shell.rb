@@ -22,15 +22,6 @@ file '/etc/profile.d/PackageKit.sh' do
   action :delete
 end
 
-cookbook_file '/etc/profile.d/which2.sh' do
-  # patch bashism rhbz#1526500
-  source 'which2.sh'
-  owner 'root'
-  group 'root'
-  mode '0444'
-  action :create
-end
-
 # set this up so it copies ~/.ssh for new users, with the correct permissions
 directory '/etc/skel/.ssh' do
   owner 'root'

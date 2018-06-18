@@ -7,7 +7,6 @@ Changelog
 - versioning rebase: cookbook releases now correspond with Fedora releases
 - BREAKING CHANGE: [replace denyhosts with fail2ban](https://github.com/dgoerger/workstation/issues/1)
 - [support VNC as additional remote desktop option](https://github.com/dgoerger/workstation/issues/21) - previously we only supported the proprietary FastX
-- [replace AT&T ksh with OpenBSD ksh](https://github.com/dgoerger/workstation/issues/6)
 - [manage system-level crypto policies](https://github.com/dgoerger/workstation/issues/22) `man 8 update-crypto-policies`
 - BREAKING CHANGE: [upgrade Botan major version 1->2](https://github.com/dgoerger/workstation/issues/2)
 - [local dns cache dnsmasq -> unbound + dnssec validation via dnssec-triggerd](https://fedoraproject.org/wiki/Features/DNSSEC_on_workstations)
