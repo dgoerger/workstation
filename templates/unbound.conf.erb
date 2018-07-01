@@ -25,6 +25,15 @@ server:
   # blackhole bad domains
   include: /usr/local/etc/unbound/blocklist.conf
 
+  # protect against rebind attacks
+  private-address: 10.0.0.0/8
+  private-address: 172.16.0.0/12
+  private-address: 192.168.0.0/16
+  private-address: 169.254.0.0/16
+  private-address: fd00::/8
+  private-address: fe80::/10
+  private-address: ::ffff:0:0/96
+
 <% unless node['_dns']['invalid_tlds'].empty? -%>
   # don't perform DNSSEC validation on known-invalid domain space,
   # .. e.g. 'fully.qualified.domain.NOT_A_TLD'
@@ -36,7 +45,7 @@ server:
 <%   end -%>
 <% end -%>
 
-<% if node['_dns']['rfc1918_enabled'] -%>
+<% if node['_dns']['rfc1918_rdns_enabled'] -%>
   # permit reverse lookup of rfc1918 IP space
   local-zone: "10.in-addr.arpa." transparent
   local-zone: "16.172.in-addr.arpa." transparent
