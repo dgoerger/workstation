@@ -4,7 +4,7 @@
 
 
 Name:             R-%{packname}
-Version:          2.2.1
+Version:          3.0.0
 Release:          1%{?dist}
 Summary:          Create Elegant Data Visualisations Using the Grammar of Graphics
 
@@ -422,6 +422,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Jul 09 2018 David Goerger - 3.0.0-1
+- update to 3.0.0
+
 * Mon Apr 02 2018 David Goerger - 2.2.1-2
 - drop more bundled libs that are now packaged in Fedora proper
 
