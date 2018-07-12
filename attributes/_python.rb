@@ -1,5 +1,7 @@
 default['workstation']['python']['packages'] = [
   'ninja-ide',
+  'pipenv',
+  'pipenv-doc',
   'python-beautifulsoup4',
   'python2-crypto',
   'python2-csvkit',
