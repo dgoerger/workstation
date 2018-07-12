@@ -1,19 +1,28 @@
 Changelog
 =========
 
-27.0 - unreleased
+28.0 - unreleased
 -----------------
 
-- versioning rebase: cookbook releases now correspond with Fedora releases
-- BREAKING CHANGE: [replace denyhosts with fail2ban](https://github.com/dgoerger/workstation/issues/1)
-- [support VNC as additional remote desktop option](https://github.com/dgoerger/workstation/issues/21) - previously we only supported the proprietary FastX
-- [manage system-level crypto policies](https://github.com/dgoerger/workstation/issues/22) `man 8 update-crypto-policies`
-- BREAKING CHANGE: [upgrade Botan major version 1->2](https://github.com/dgoerger/workstation/issues/2)
-- [local dns cache dnsmasq -> unbound + dnssec validation via dnssec-triggerd](https://fedoraproject.org/wiki/Features/DNSSEC_on_workstations)
-- [support Java 9](https://fedoraproject.org/wiki/Changes/Java9TechPreview)
-- [support Flatpak](https://github.com/dgoerger/workstation/issues/19)
-- [OpenSSH adheres to system-level crypto policy](https://github.com/dgoerger/workstation/issues/3)
-- [OpenSSH no-longer supports protocol version 1](https://fedoraproject.org/wiki/Changes/Remove_SSH-1_from_OpenSSH)
+- ADMINISTRATIVA: cookbook releases now correspond with Fedora releases
+
+- BREAKING: replace denyhosts with fail2ban
+
+- BREAKING: replace DNSMASQ with Unbound local dns cache with DNSSEC validation
+
+- BREAKING: block RFC1918 address space from the DNS by default (can be overridden on a per-domain basis)
+
+- BREAKING: [OpenSSH no-longer supports protocol version 1](https://fedoraproject.org/wiki/Changes/Remove_SSH-1_from_OpenSSH)
+
+- BREAKING: upgrade Botan major version 1->2
+
+- NEW: support VNC as remote desktop option
+
+- NEW: support Flatpak
+
+- NEW: [Java 9](https://fedoraproject.org/wiki/Changes/Java9TechPreview)
+
+- manage system-level crypto policies - `man 8 update-crypto-policies`
 
 
 2.0 - August 2017

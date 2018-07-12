@@ -34,6 +34,13 @@ server:
   private-address: fe80::/10
   private-address: ::ffff:0:0/96
 
+<% unless node['_dns']['private_domains'].empty? -%>
+  # permit RFC1918 addresses for these domains
+<%   node['_dns']['private_domains'].each do |domain| -%>
+<%=    "  private-domain: #{domain}" %>
+<%   end -%>
+<% end -%>
+
 <% unless node['_dns']['invalid_tlds'].empty? -%>
   # don't perform DNSSEC validation on known-invalid domain space,
   # .. e.g. 'fully.qualified.domain.NOT_A_TLD'
