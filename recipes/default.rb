@@ -3,7 +3,6 @@
 #
 #### software installation
 ### Free and Open Source Software
-##include_recipe 'workstation::atom' # no build for f27?
 #include_recipe 'workstation::audio_editing'
 #include_recipe 'workstation::browsers'
 #include_recipe 'workstation::c'
