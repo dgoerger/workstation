@@ -1,3 +1,3 @@
 default['workstation']['erlang']['packages'] = [
-  'erlang-typer'
+  'erlang-dialyzer'
 ]
