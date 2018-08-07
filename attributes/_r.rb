@@ -1,4 +1,4 @@
-default['workstation']['r']['packages'] = [
+default['workstation']['_r']['packages'] = [
   'R',
   'R-abind',
   'R-acepack',

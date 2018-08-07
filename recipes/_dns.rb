@@ -18,12 +18,25 @@ template '/etc/NetworkManager/NetworkManager.conf' do
   notifies :reload, 'service[NetworkManager]', :delayed
 end
 
+directory '/usr/local/etc/unbound' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+execute 'initialize_blocklist' do
+  command 'touch /usr/local/etc/unbound/blocklist.conf'
+  action :nothing
+end
+
 template '/etc/unbound/unbound.conf' do
   source 'unbound.conf.erb'
   owner 'root'
   group 'root'
   mode '0444'
   action :create
+  notifies :run, 'execute[initialize_blocklist]', :immediately
   notifies :restart, 'service[unbound]', :delayed
 end
 

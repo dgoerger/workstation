@@ -1,4 +1,4 @@
-default['workstation']['python']['packages'] = [
+default['workstation']['_python']['packages'] = [
   'ninja-ide',
   'pipenv',
   'pipenv-doc',
@@ -31,6 +31,7 @@ default['workstation']['python']['packages'] = [
   'python3-Cython',
   'python3-demjson',
   'python3-devel',
+  'python3-gensim-core',
   'python3-gensim-test',
   'python3-h5py',
   'python3-ipython-doc',
@@ -57,6 +58,7 @@ default['workstation']['python']['packages'] = [
   'python3-virtualenv',
   'python3-virtualenv-api',
   'python3-virtualenv-clone',
+  'python3-wordsegment',
 #  # zipline has ancient unresolvable deps:
 #  # - numpy 1.11.1 vs 1.12.1
 #  # - scipy 0.17.1 vs 0.19.1

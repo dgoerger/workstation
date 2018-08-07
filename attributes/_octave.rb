@@ -1,4 +1,4 @@
-default['workstation']['octave']['packages'] = [
+default['workstation']['_octave']['packages'] = [
   # base
   'octave',
   'octave-devel',

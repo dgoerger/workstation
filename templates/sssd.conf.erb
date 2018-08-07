@@ -1,43 +1,35 @@
 ### THIS FILE IS MANAGED BY CHEF ###
 
-[sssd]
-config_file_version = 2
-reconnection_retries = 3
-sbus_timeout = 30
-services = nss, pam
-domains = <%= node['workstation']['_sssd']['domain'] %>
-
-[nss]
-filter_users = <%= node['workstation']['_sssd']['filter_users'] %>
-filter_groups = <%= node['workstation']['_sssd']['filter_groups'] %>
-
-[pam]
-
-[domain/<%= node['workstation']['_sssd']['domain'] -%>]
-debug_level = 4
-
+[domain/default]
+autofs_provider = ldap
 id_provider = ldap
-access_provider = ldap
-
-ldap_schema = rfc2307
-ldap_access_order = expire
-ldap_account_expire_policy = ad
-ldap_force_upper_case_realm = true
-
-ldap_user_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
-ldap_group_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
-ldap_user_object_class = posixAccount
-ldap_user_name = uid
-ldap_user_fullname = cn
-ldap_user_principal = cn
-ldap_group_object_class = posixGroup
-
-enumerate = false
-cache_credentials = false
-
+krb5_store_password_if_offline = False
+ldap_uri = ldaps://<%= node['workstation']['_sssd']['ldap_server'] %>/
+chpass_provider = krb5
+ldap_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
+cache_credentials = False
+auth_provider = krb5
+krb5_server = <%= node['workstation']['_sssd']['kerberos_server'] %>
+krb5_realm = <%= node['workstation']['_sssd']['kerberos_realm'] %>
+ldap_tls_cacertdir = /etc/openldap/certs
+ldap_tls_reqcert = allow
 # in case users try to log in with their username in all-caps
 case_sensitive = false
 
-ldap_uri = ldaps://<%= node['workstation']['_sssd']['ldap_server'] %>
-ldap_search_base = <%= node['workstation']['_sssd']['ldap_dc'] %>
-ldap_tls_reqcert = allow
+[sssd]
+services = pam, autofs, nss
+domains = default
+
+[nss]
+
+[pam]
+
+[sudo]
+
+[autofs]
+
+[ssh]
+
+[pac]
+
+[ifp]
