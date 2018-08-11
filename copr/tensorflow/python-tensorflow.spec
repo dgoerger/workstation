@@ -1,7 +1,7 @@
 %global pypi_name tensorflow
 
 Name:           python-%{pypi_name}
-Version:        1.8.0
+Version:        1.9.0
 Release:        1%{?dist}
 Summary:        TensorFlow helps the tensors flow
 
@@ -60,6 +60,9 @@ rm -rf %{buildroot}/%{python3_sitelib}/external
 
 
 %changelog
+* Sat Aug 11 2018 David Goerger - 1.9.0-1
+- update to 1.9.0
+
 * Mon Apr 02 2018 David Goerger - 1.7.0-1
 - update to 1.7.0
 - deprecate python2 flavour
