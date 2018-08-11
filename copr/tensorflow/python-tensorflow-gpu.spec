@@ -1,7 +1,7 @@
 %global pypi_name tensorflow
 
 Name:           python-%{pypi_name}-gpu
-Version:        1.8.0
+Version:        1.10.0
 Release:        1%{?dist}
 Summary:        TensorFlow helps the tensors flow
 
@@ -58,12 +58,16 @@ mv %{buildroot}/%{python3_sitearch}/%{pypi_name}_gpu-%{version}.dist-info %{buil
 %{_bindir}/freeze_graph
 %{_bindir}/saved_model_cli
 %{_bindir}/tensorboard
+%{_bindir}/tflite_convert
 %{_bindir}/toco
 %{_bindir}/toco_from_protos
 %{python3_sitelib}/%{pypi_name}*
 
 
 %changelog
+* Sat Aug 11 2018 David Goerger - 1.10.0-1
+- update to 1.10.0
+
 * Mon Apr 30 2018 David Goerger - 1.8.0-1
 - update to 1.8.0
 

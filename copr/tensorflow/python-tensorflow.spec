@@ -1,8 +1,8 @@
 %global pypi_name tensorflow
 
 Name:           python-%{pypi_name}
-Version:        1.9.0
-Release:        2%{?dist}
+Version:        1.10.0
+Release:        1%{?dist}
 Summary:        TensorFlow helps the tensors flow
 
 License:        Apache 2.0
@@ -61,8 +61,8 @@ rm -rf %{buildroot}/%{python3_sitelib}/external
 
 
 %changelog
-* Sat Aug 11 2018 David Goerger - 1.9.0-2
-- update to 1.9.0
+* Sat Aug 11 2018 David Goerger - 1.10.0-1
+- update to 1.10.0
 - new: /usr/bin/tflite_convert
 
 * Mon Apr 02 2018 David Goerger - 1.7.0-1
