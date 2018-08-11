@@ -5,7 +5,7 @@
 
 Name:             R-%{packname}
 Version:          3.0.0
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          Create Elegant Data Visualisations Using the Grammar of Graphics
 
 Group:            Applications/Engineering 
@@ -237,6 +237,7 @@ BuildRequires:    R-base64enc
 BuildRequires:    R-biglm
 BuildRequires:    R-bindr
 BuildRequires:    R-bindrcpp
+BuildRequires:    R-bindrcpp-devel
 BuildRequires:    R-biomaRt
 BuildRequires:    R-bitops
 BuildRequires:    R-caTools
@@ -330,18 +331,17 @@ BuildRequires:    R-zoo
 Provides: R-RColorBrewer
 Provides: R-broom
 Provides: R-cellranger
-Provides: R-cli
 Provides: R-colorspace
 Provides: R-dbplyr
 Provides: R-dplyr
+Provides: R-fansi
 Provides: R-forcats
-Provides: R-glue
 Provides: R-haven
 Provides: R-hms
 Provides: R-httr
 Provides: R-modelr
 Provides: R-munsell
-Provides: R-psych
+Provides: R-pillar
 Provides: R-purrr
 Provides: R-readr
 Provides: R-readxl
@@ -353,6 +353,9 @@ Provides: R-tibble
 Provides: R-tidyr
 Provides: R-tidyselect
 Provides: R-tidyverse
+Provides: R-tinytex
+Provides: R-utf8
+Provides: R-xfun
 
 %description
 A system for 'declaratively' creating graphics, based on "The Grammar of
@@ -396,18 +399,17 @@ rm -rf %{buildroot}
 %{rlibdir}/RColorBrewer
 %{rlibdir}/broom
 %{rlibdir}/cellranger
-%{rlibdir}/cli
 %{rlibdir}/colorspace
 %{rlibdir}/dbplyr
 %{rlibdir}/dplyr
+%{rlibdir}/fansi
 %{rlibdir}/forcats
-%{rlibdir}/glue
 %{rlibdir}/haven
 %{rlibdir}/hms
 %{rlibdir}/httr
 %{rlibdir}/modelr
 %{rlibdir}/munsell
-%{rlibdir}/psych
+%{rlibdir}/pillar
 %{rlibdir}/purrr
 %{rlibdir}/readr
 %{rlibdir}/readxl
@@ -419,9 +421,15 @@ rm -rf %{buildroot}
 %{rlibdir}/tidyr
 %{rlibdir}/tidyselect
 %{rlibdir}/tidyverse
+%{rlibdir}/tinytex
+%{rlibdir}/utf8
+%{rlibdir}/xfun
 
 
 %changelog
+* Fri Aug 10 2018 David Goerger - 3.0.0-2
+- deps fixups
+
 * Mon Jul 09 2018 David Goerger - 3.0.0-1
 - update to 3.0.0
 
