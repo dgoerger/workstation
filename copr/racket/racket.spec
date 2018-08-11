@@ -1,6 +1,6 @@
 Name:		racket
-Version:	6.12
-Release:	2%{?dist}
+Version:	7.0
+Release:	1%{?dist}
 Summary:	Racket is a full-spectrum programming language
 
 Group:		Development/Languages
@@ -103,6 +103,9 @@ update-desktop-database &> /dev/null || :
 %{_libdir}/*.so
 
 %changelog
+* Sat Aug 11 2018 David Goerger - 7.0-1
+- update to 7.0
+
 * Wed Mar 28 2018 David Goerger - 6.12-2
 - update to 6.12
 - switch url to HTTPS
@@ -110,16 +113,16 @@ update-desktop-database &> /dev/null || :
 * Sun Nov 19 2017 David Goerger - 6.11-1
 - update to 6.11
 
-* Thu Aug 31 2017 David Goerger <david.goerger@yale.edu> - 6.10-1
+* Thu Aug 31 2017 David Goerger - 6.10-1
 - update to 6.10
 
-* Sat Jun 10 2017 David Goerger <david.goerger@yale.edu> - 6.9-1
+* Sat Jun 10 2017 David Goerger - 6.9-1
 - update to 6.9
 
-* Wed Nov 23 2016 David Goerger <david.goerger@yale.edu> - 6.7-1
+* Wed Nov 23 2016 David Goerger - 6.7-1
 - update to latest
 
-* Fri Jul 22 2016 David Goerger <its-sa@yale.edu> - 6.6
+* Fri Jul 22 2016 David Goerger - 6.6-1
 - update to latest version
 
 * Sat Jan 23 2016 Brandon Thomas <bthomaszx@gmail.com>
