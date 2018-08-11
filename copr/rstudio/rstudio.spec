@@ -1,6 +1,6 @@
 %global version_major 1
 %global version_minor 1
-%global version_patch 453
+%global version_patch 456
 
 %global co_date 20160730
 %global gin_ver 1.5
@@ -270,6 +270,9 @@ fi
 
 
 %changelog
+* Sat Aug 11 2018 David Goerger - 1.1.456-1
+- update to 1.1.456
+
 * Thu May 17 2018 David Goerger - 1.1.453-1
 - update to 1.1.453
 
