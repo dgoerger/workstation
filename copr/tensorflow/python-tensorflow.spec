@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.9.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        TensorFlow helps the tensors flow
 
 License:        Apache 2.0
@@ -54,14 +54,16 @@ rm -rf %{buildroot}/%{python3_sitelib}/external
 %{_bindir}/freeze_graph
 %{_bindir}/saved_model_cli
 %{_bindir}/tensorboard
+%{_bindir}/tflite_convert
 %{_bindir}/toco
 %{_bindir}/toco_from_protos
 %{python3_sitelib}/%{pypi_name}*
 
 
 %changelog
-* Sat Aug 11 2018 David Goerger - 1.9.0-1
+* Sat Aug 11 2018 David Goerger - 1.9.0-2
 - update to 1.9.0
+- new: /usr/bin/tflite_convert
 
 * Mon Apr 02 2018 David Goerger - 1.7.0-1
 - update to 1.7.0
