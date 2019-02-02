@@ -29,6 +29,7 @@ template '/etc/pam.d/sshd' do
   group 'root'
   mode '0444'
   action :create
+  not_if { node['workstation']['_duo']['api_host'].empty? || node['workstation']['_duo']['ikey'].empty? │| node['workstation']['_duo']['skey'].empty? }
   # TODO: is there a verify command for PAM?
 end
 

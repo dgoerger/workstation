@@ -6,7 +6,6 @@ include_recipe 'workstation::_gdm'
 
 # desktop packages
 include_recipe 'workstation::_browsers'
-include_recipe 'workstation::_eclipse'
 include_recipe 'workstation::_emacs'
 include_recipe 'workstation::_git'
 include_recipe 'workstation::_libreoffice'

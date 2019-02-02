@@ -27,14 +27,6 @@ cookbook_file '/usr/local/lib64/nagios/check_autofs' do
   action :create
 end
 
-template '/usr/local/lib64/nagios/check_ldaps_zoo' do
-  source 'nrpe_check_ldaps_zoo.sh.erb'
-  owner 'root'
-  group 'root'
-  mode '0445'
-  action :create
-end
-
 cookbook_file '/usr/local/lib64/nagios/check_memory' do
   source 'nrpe_check_memory.sh'
   owner 'root'

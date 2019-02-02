@@ -16,7 +16,6 @@ include_recipe 'workstation::_repo'
 include_recipe 'workstation::_c'
 include_recipe 'workstation::_crypto_policy'
 include_recipe 'workstation::_cups' unless node['workstation']['cups']['server'].empty?
-include_recipe 'workstation::_debuginfo'
 include_recipe 'workstation::_dns'
 include_recipe 'workstation::_fail2ban'
 include_recipe 'workstation::_firewalld'
@@ -25,9 +24,6 @@ include_recipe 'workstation::_msmtp' unless node['workstation']['_msmtp']['smart
 include_recipe 'workstation::_nfs' unless node['workstation']['_nfs']['mounts'].empty?
 include_recipe 'workstation::_nrpe' unless node['workstation']['_nrpe']['allowed_hosts'].empty?
 include_recipe 'workstation::_openssh'
-include_recipe 'workstation::_passwd' unless node['workstation']['_sssd']['kerberos_server'].empty?
-include_recipe 'workstation::_perl'
-include_recipe 'workstation::_powertop'
 include_recipe 'workstation::_rsyslog'
 include_recipe 'workstation::_sssd'
 include_recipe 'workstation::_shell'

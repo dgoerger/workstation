@@ -5,7 +5,7 @@ cookbook_file '/usr/local/sbin/dnf-patch-everything' do
   source 'dnf-patch-everything.sh'
   owner 'root'
   group 'root'
-  mode '0551'
+  mode '0554'
   action :create
   verify '/usr/bin/bash -n %{path}'
 end
