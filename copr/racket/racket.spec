@@ -11,7 +11,7 @@ Source0:	https://mirror.racket-lang.org/installers/%{version}/%{name}-%{version}
 # fix rpath issue with executables
 BuildRequires:	chrpath
 
-BuildRequires:	libffi-devel
+BuildRequires:	libffi-devel gcc
 BuildRequires:	gtk3 cairo pango libpng glib2 libjpeg-turbo
 
 # to execute DrRacket (dlopen / ffi)
