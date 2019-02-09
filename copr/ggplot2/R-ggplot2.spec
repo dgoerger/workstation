@@ -395,7 +395,6 @@ rm -rf %{buildroot}
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/data
 # deps - bundling for efficiency, remove and add to RPM 'Requires' above once packaged in Fedora proper
-%{rlibdir}/GeneR
 %{rlibdir}/RColorBrewer
 %{rlibdir}/broom
 %{rlibdir}/cellranger
