@@ -33,7 +33,6 @@ Requires:         R-COPASI
 Requires:         R-DBI
 Requires:         R-DelayedArray
 Requires:         R-DynDoc
-Requires:         R-GeneR
 Requires:         R-GenomeInfoDb
 Requires:         R-GenomeInfoDbData
 Requires:         R-GenomicAlignments
@@ -199,7 +198,6 @@ BuildRequires:    R-COPASI
 BuildRequires:    R-DBI
 BuildRequires:    R-DelayedArray
 BuildRequires:    R-DynDoc
-BuildRequires:    R-GeneR
 BuildRequires:    R-GenomeInfoDb
 BuildRequires:    R-GenomeInfoDbData
 BuildRequires:    R-GenomicAlignments
@@ -328,6 +326,7 @@ BuildRequires:    R-xtable
 BuildRequires:    R-yaml
 BuildRequires:    R-zoo
 
+Provides: R-GeneR
 Provides: R-RColorBrewer
 Provides: R-broom
 Provides: R-cellranger
@@ -396,6 +395,7 @@ rm -rf %{buildroot}
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/data
 # deps - bundling for efficiency, remove and add to RPM 'Requires' above once packaged in Fedora proper
+%{rlibdir}/GeneR
 %{rlibdir}/RColorBrewer
 %{rlibdir}/broom
 %{rlibdir}/cellranger
