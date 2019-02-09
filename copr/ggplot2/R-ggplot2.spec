@@ -4,8 +4,8 @@
 
 
 Name:             R-%{packname}
-Version:          3.0.0
-Release:          2%{?dist}
+Version:          3.1.0
+Release:          1%{?dist}
 Summary:          Create Elegant Data Visualisations Using the Grammar of Graphics
 
 Group:            Applications/Engineering 
@@ -427,6 +427,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Feb 09 2019 David Goerger - 3.1.0-1
+- update to 3.1.0
+
 * Fri Aug 10 2018 David Goerger - 3.0.0-2
 - deps fixups
 
