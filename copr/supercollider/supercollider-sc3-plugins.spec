@@ -1,7 +1,7 @@
 Summary: Collection of SuperCollider plugins
 Name: supercollider-sc3-plugins
 Version: 3.10.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 Group: Applications/Multimedia
 URL: http://sc3-plugins.sourceforge.net/
@@ -9,7 +9,7 @@ SOURCE0: https://raw.githubusercontent.com/supercollider/sc3-plugins/master/READ
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: supercollider >= 3.5
 
-BuildRequires: cmake supercollider-devel fftw-devel stk-devel git
+BuildRequires: cmake supercollider-devel fftw-devel stk-devel git gcc
 
 Obsoletes: supercollider-extras < 3.5
 Provides: supercollider-extras = %{version}-%{release}
@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/SuperCollider/plugins/*
 
 %changelog
-* Sun Feb 10 2019 David Goerger - 3.10.0-2
+* Sun Feb 10 2019 David Goerger - 3.10.0-3
 - update to 3.10.0
 
 * Sat Apr 07 2018 David Goerger - 3.7.1-169-g9307b41
