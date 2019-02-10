@@ -9,7 +9,7 @@ SOURCE0: https://raw.githubusercontent.com/supercollider/sc3-plugins/master/READ
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: supercollider >= 3.5
 
-BuildRequires: cmake supercollider-devel fftw-devel stk-devel git gcc
+BuildRequires: cmake supercollider-devel fftw-devel stk-devel git gcc gcc-c++
 
 Obsoletes: supercollider-extras < 3.5
 Provides: supercollider-extras = %{version}-%{release}
