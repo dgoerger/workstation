@@ -24,7 +24,7 @@ Collection of SuperCollider plugins
 %prep
 git clone --recursive https://github.com/supercollider/sc3-plugins.git
 cd sc3-plugins
-git checkout Version-%{Version}
+git checkout Version-%{version}
 
 %build
 # remove all git directories
