@@ -75,7 +75,6 @@ Requires:         R-bitops
 Requires:         R-caTools
 Requires:         R-callr
 Requires:         R-car
-Requires:         R-cli
 Requires:         R-clipr
 Requires:         R-combinat
 Requires:         R-core
@@ -90,7 +89,6 @@ Requires:         R-fibroEset
 Requires:         R-fs
 Requires:         R-futile.logger
 Requires:         R-futile.options
-Requires:         R-glue
 Requires:         R-gtable
 Requires:         R-hgu133acdf
 Requires:         R-hgu95av2cdf
@@ -243,7 +241,6 @@ BuildRequires:    R-bitops
 BuildRequires:    R-caTools
 BuildRequires:    R-callr
 BuildRequires:    R-car
-BuildRequires:    R-cli
 BuildRequires:    R-clipr
 BuildRequires:    R-combinat
 BuildRequires:    R-core
@@ -258,7 +255,6 @@ BuildRequires:    R-fibroEset
 BuildRequires:    R-fs
 BuildRequires:    R-futile.logger
 BuildRequires:    R-futile.options
-BuildRequires:    R-glue
 BuildRequires:    R-gtable
 BuildRequires:    R-hgu133acdf
 BuildRequires:    R-hgu95av2cdf
@@ -334,12 +330,14 @@ Provides: R-GeneR
 Provides: R-RColorBrewer
 Provides: R-broom
 Provides: R-cellranger
+Provides: R-cli
 Provides: R-colorspace
 Provides: R-dbplyr
 Provides: R-dplyr
 Provides: R-fansi
 Provides: R-forcats
 Provides: R-generics
+Provides: R-glue
 Provides: R-haven
 Provides: R-hms
 Provides: R-httr
@@ -405,12 +403,14 @@ rm -rf %{buildroot}
 %{rlibdir}/RColorBrewer
 %{rlibdir}/broom
 %{rlibdir}/cellranger
+%{rlibdir}/cli
 %{rlibdir}/colorspace
 %{rlibdir}/dbplyr
 %{rlibdir}/dplyr
 %{rlibdir}/fansi
 %{rlibdir}/forcats
 %{rlibdir}/generics
+%{rlibdir}/glue
 %{rlibdir}/haven
 %{rlibdir}/hms
 %{rlibdir}/httr
