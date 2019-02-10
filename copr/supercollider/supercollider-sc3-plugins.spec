@@ -1,7 +1,7 @@
 Summary: Collection of SuperCollider plugins
 Name: supercollider-sc3-plugins
 Version: 3.10.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 Group: Applications/Multimedia
 URL: http://sc3-plugins.sourceforge.net/
@@ -28,6 +28,7 @@ git checkout Version-%{version}
 
 %build
 # remove all git directories
+cd sc3-plugins
 find . -type d -name .git -printf "\"%h/%f\"\n" | xargs rm -rf 
 
 %ifarch x86_64
@@ -51,7 +52,7 @@ make %{?_smp_mflags}
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT
 
-cd build
+cd sc3-plugins/build
 make install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -63,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/SuperCollider/plugins/*
 
 %changelog
-* Sat Feb 09 2019 David Goerger - 3.10.0-1
+* Sun Feb 10 2019 David Goerger - 3.10.0-2
 - update to 3.10.0
 
 * Sat Apr 07 2018 David Goerger - 3.7.1-169-g9307b41
