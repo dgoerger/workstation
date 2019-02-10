@@ -6,11 +6,11 @@ Changelog
 
 - ADMINISTRATIVA: cookbook releases now correspond with Fedora releases
 
-- BREAKING: replace denyhosts with fail2ban
+- BREAKING: replace denyhosts with fail2ban (see `attributes/_fail2ban.rb`)
 
-- BREAKING: replace DNSMASQ with Unbound local dns cache with DNSSEC validation
+- BREAKING: replace DNSMASQ with Unbound local dns cache with DNSSEC validation (see `attributes/_dns.rb`)
 
-- BREAKING: block RFC1918 address space from the DNS by default (can be overridden on a per-domain basis)
+- BREAKING: block RFC1918 address space from the DNS by default (can be overridden on a per-domain basis, see `attributes/_dns.rb`)
 
 - BREAKING: [OpenSSH no-longer supports protocol version 1](https://fedoraproject.org/wiki/Changes/Remove_SSH-1_from_OpenSSH)
 
@@ -18,11 +18,25 @@ Changelog
 
 - NEW: support VNC as remote desktop option
 
+- NEW: support pipenv python package management
+
 - NEW: support Flatpak
 
 - NEW: [Java 9](https://fedoraproject.org/wiki/Changes/Java9TechPreview)
 
 - manage system-level crypto policies - `man 8 update-crypto-policies`
+
+- upgrade to [Fedora 28](https://fedoraproject.org/wiki/Releases/28/ChangeSet) from Fedora 26
+
+  - GCC 8.1 from GCC 7.3
+
+  - Glasgow Haskell Compiler 8.2 from GHC 8.0
+
+- deprecations
+
+  - Atom editor - the repo is no-longer maintained. Recommendation is to use [Flatpak](https://flathub.org/), if Electron-based text editors are required.
+
+  - PGI compilers - licences expire nonoptimally in the middle of the academic year
 
 
 2.0 - August 2017
