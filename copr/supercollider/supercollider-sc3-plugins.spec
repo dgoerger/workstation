@@ -5,6 +5,7 @@ Release: 1%{?dist}
 License: GPL
 Group: Applications/Multimedia
 URL: http://sc3-plugins.sourceforge.net/
+SOURCE0: https://raw.githubusercontent.com/supercollider/sc3-plugins/master/README.md
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: supercollider >= 3.5
 
