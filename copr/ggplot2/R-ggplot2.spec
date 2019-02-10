@@ -5,7 +5,7 @@
 
 Name:             R-%{packname}
 Version:          3.1.0
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          Create Elegant Data Visualisations Using the Grammar of Graphics
 
 Group:            Applications/Engineering 
@@ -75,6 +75,7 @@ Requires:         R-bitops
 Requires:         R-caTools
 Requires:         R-callr
 Requires:         R-car
+Requires:         R-cli
 Requires:         R-clipr
 Requires:         R-combinat
 Requires:         R-core
@@ -86,8 +87,10 @@ Requires:         R-digest
 Requires:         R-evaluate
 Requires:         R-expm
 Requires:         R-fibroEset
+Requires:         R-fs
 Requires:         R-futile.logger
 Requires:         R-futile.options
+Requires:         R-glue
 Requires:         R-gtable
 Requires:         R-hgu133acdf
 Requires:         R-hgu95av2cdf
@@ -133,7 +136,6 @@ Requires:         R-qtl
 Requires:         R-qvalue
 Requires:         R-rematch
 Requires:         R-reshape2
-Requires:         R-rlang
 Requires:         R-rlecuyer
 Requires:         R-rprojroot
 Requires:         R-rstudioapi
@@ -241,6 +243,7 @@ BuildRequires:    R-bitops
 BuildRequires:    R-caTools
 BuildRequires:    R-callr
 BuildRequires:    R-car
+BuildRequires:    R-cli
 BuildRequires:    R-clipr
 BuildRequires:    R-combinat
 BuildRequires:    R-core
@@ -252,8 +255,10 @@ BuildRequires:    R-digest
 BuildRequires:    R-evaluate
 BuildRequires:    R-expm
 BuildRequires:    R-fibroEset
+BuildRequires:    R-fs
 BuildRequires:    R-futile.logger
 BuildRequires:    R-futile.options
+BuildRequires:    R-glue
 BuildRequires:    R-gtable
 BuildRequires:    R-hgu133acdf
 BuildRequires:    R-hgu95av2cdf
@@ -299,7 +304,6 @@ BuildRequires:    R-qtl
 BuildRequires:    R-qvalue
 BuildRequires:    R-rematch
 BuildRequires:    R-reshape2
-BuildRequires:    R-rlang
 BuildRequires:    R-rlecuyer
 BuildRequires:    R-rprojroot
 BuildRequires:    R-rstudioapi
@@ -335,16 +339,19 @@ Provides: R-dbplyr
 Provides: R-dplyr
 Provides: R-fansi
 Provides: R-forcats
+Provides: R-generics
 Provides: R-haven
 Provides: R-hms
 Provides: R-httr
 Provides: R-modelr
 Provides: R-munsell
 Provides: R-pillar
+Provides: R-progress
 Provides: R-purrr
 Provides: R-readr
 Provides: R-readxl
 Provides: R-reprex
+Provides: R-rlang
 Provides: R-rmarkdown
 Provides: R-rvest
 Provides: R-scales
@@ -403,16 +410,19 @@ rm -rf %{buildroot}
 %{rlibdir}/dplyr
 %{rlibdir}/fansi
 %{rlibdir}/forcats
+%{rlibdir}/generics
 %{rlibdir}/haven
 %{rlibdir}/hms
 %{rlibdir}/httr
 %{rlibdir}/modelr
 %{rlibdir}/munsell
 %{rlibdir}/pillar
+%{rlibdir}/progress
 %{rlibdir}/purrr
 %{rlibdir}/readr
 %{rlibdir}/readxl
 %{rlibdir}/reprex
+%{rlibdir}/rlang
 %{rlibdir}/rmarkdown
 %{rlibdir}/rvest
 %{rlibdir}/scales
@@ -426,7 +436,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Sat Feb 09 2019 David Goerger - 3.1.0-1
+* Sat Feb 09 2019 David Goerger - 3.1.0-2
 - update to 3.1.0
 
 * Fri Aug 10 2018 David Goerger - 3.0.0-2
