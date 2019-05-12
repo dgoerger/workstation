@@ -84,6 +84,7 @@ Group:		System Environment/Libraries
 License:	MIT
 URL:		https://www.musl-libc.org/
 Source0:	https://www.musl-libc.org/releases/%{name}-%{version}.tar.gz
+BuildRequires: gcc
 
 # Fix Makefile to not use INSTALL variable so make_install macro works
 Patch0:         musl-1.1.18-Makefile-rename-INSTALL-var.patch
