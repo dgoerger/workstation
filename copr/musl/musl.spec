@@ -82,8 +82,8 @@ Release:	1%{?dist}
 Summary:	Fully featured lightweight standard C library for Linux
 Group:		System Environment/Libraries
 License:	MIT
-URL:		http://www.musl-libc.org/
-Source0:	http://www.musl-libc.org/releases/%{name}-%{version}.tar.gz
+URL:		https://www.musl-libc.org/
+Source0:	https://www.musl-libc.org/releases/%{name}-%{version}.tar.gz
 
 # Fix Makefile to not use INSTALL variable so make_install macro works
 Patch0:         musl-1.1.18-Makefile-rename-INSTALL-var.patch
