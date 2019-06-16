@@ -183,27 +183,27 @@ conformance and safety.
 This package provides a wrapper around gcc to compile
 programs and libraries with musl easily.
 
-%package clang
-Summary:        Wrapper for using clang with musl
-Group:		Development/Tools
-Requires:	%{name}-devel = %{version}-%{release}
-Requires:	clang
-
-%description clang
-musl is a new C standard library to power a new generation
-of Linux-based devices. It is lightweight, fast, simple,
-free, and strives to be correct in the sense of standards
-conformance and safety.
-
-This package provides a wrapper around clang to compile
-programs and libraries with musl easily.
+#%package clang
+#Summary:        Wrapper for using clang with musl
+#Group:		Development/Tools
+#Requires:	%{name}-devel = %{version}-%{release}
+#Requires:	clang
+#
+#%description clang
+#musl is a new C standard library to power a new generation
+#of Linux-based devices. It is lightweight, fast, simple,
+#free, and strives to be correct in the sense of standards
+#conformance and safety.
+#
+#This package provides a wrapper around clang to compile
+#programs and libraries with musl easily.
 
 
 %prep
 %autosetup -p1
 
 %build
-%configure --enable-debug --enable-wrapper=all
+%configure --enable-debug --enable-wrapper=gcc
 %make_build
 
 
@@ -260,13 +260,16 @@ EOF
 %{_bindir}/musl-gcc
 %{_libdir}/musl-gcc.specs
 
-%files clang
-%license COPYRIGHT
-%{_bindir}/musl-clang
-%{_bindir}/ld.musl-clang
+#%files clang
+#%license COPYRIGHT
+#%{_bindir}/musl-clang
+#%{_bindir}/ld.musl-clang
 
 
 %changelog
+* Sun Jun 16 2019 David Goerger - 1.1.22-2
+- disable musl-clang: it doesn't work
+
 * Sun May 12 2019 David Goerger - 1.1.22-1
 - update to 1.1.22
 
