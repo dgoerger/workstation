@@ -77,7 +77,7 @@
 %endif
 
 Name:		musl
-Version:	1.1.22
+Version:	1.1.23
 Release:	1%{?dist}
 Summary:	Fully featured lightweight standard C library for Linux
 Group:		System Environment/Libraries
@@ -267,6 +267,9 @@ EOF
 
 
 %changelog
+* Fri Oct 04 2019 David Goerger - 1.1.23-1
+- update to 1.1.23
+
 * Sun Jun 16 2019 David Goerger - 1.1.22-2
 - disable musl-clang: it doesn't work
 
