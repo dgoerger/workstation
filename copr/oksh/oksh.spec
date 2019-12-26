@@ -2,15 +2,15 @@
 %define debug_package %{nil}
 
 Name:           oksh
-Version:        6.5
-Release:        2%{?dist}
+Version:        6.6
+Release:        1%{?dist}
 Summary:        OpenBSD Kornshell
 
 License:        ISC
 URL:            https://github.com/ibara/oksh
 Source0:        https://github.com/ibara/oksh/releases/download/oksh-%{version}/oksh-%{version}.tar.gz
 
-BuildRequires:  musl-gcc
+BuildRequires:  gcc
 Conflicts:      ksh
 
 
@@ -23,8 +23,7 @@ Portable OpenBSD ksh, based on the Public Domain Korn Shell (pdksh).
 
 
 %build
-export CC=musl-gcc
-./configure --enable-ksh --enable-static --prefix=/usr --mandir=/usr/share/man
+./configure --enable-ksh --prefix=/usr --mandir=/usr/share/man
 make %{?_smp_mflags}
 
 
@@ -39,5 +38,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Thu Dec 26 2019 David Goerger - 6.6-1
+- disable static build
+- update to 6.6-release
+
 * Sun May 12 2019 David Goerger - 6.5-2
 - enable static build

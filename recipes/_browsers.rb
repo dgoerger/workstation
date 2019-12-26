@@ -1,11 +1,5 @@
 ### installs and configures FOSS web browsers (firefox, chromium, lynx)
 
-## enable U2F support - udev rules
-package 'libu2f-host' do
-  # NB: no native Firefox u2f support until moz#1065729
-  action :install
-end
-
 ## chromium
 package 'chromium' do
   action :install
@@ -23,7 +17,7 @@ end
 cron 'patch_chromium' do
   time :daily
   user 'root'
-  command '/usr/bin/dnf upgrade chromium -y'
+  command '/usr/bin/yum upgrade chromium -y'
   action :create
 end
 
@@ -44,13 +38,8 @@ end
 cron 'patch_firefox' do
   time :daily
   user 'root'
-  command '/usr/bin/dnf upgrade firefox -y'
+  command '/usr/bin/yum upgrade firefox -y'
   action :create
-end
-
-## tor-browser
-package 'torbrowser-launcher' do
-  action :install
 end
 
 ## lynx

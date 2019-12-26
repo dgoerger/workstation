@@ -1,4 +1,4 @@
-default['workstation']['c']['packages'] = [
+default['workstation']['_c']['packages'] = [
   # x86_64
   'apr-util',
   'clang',
@@ -22,7 +22,6 @@ default['workstation']['c']['packages'] = [
 #  'arm-none-eabi-gcc-cs',
 #  'arm-none-eabi-newlib',
   # debuggers
-  'dwz',
   'gdb',
   'gdb-gdbserver'
 ]

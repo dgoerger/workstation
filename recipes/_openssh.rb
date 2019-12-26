@@ -4,10 +4,6 @@ package 'openssh-server' do
   action :install
 end
 
-package 'mosh' do
-  action :install
-end
-
 service 'sshd' do
   supports :restart => true
   action [ :enable, :start ]
@@ -36,7 +32,7 @@ end
 cron 'patch_openssh' do
   time :daily
   user 'root'
-  command '/usr/bin/dnf upgrade mosh openssh -y'
+  command '/usr/bin/yum upgrade mosh openssh -y'
   action :create
 end
 

@@ -6,12 +6,10 @@
 #   workstation::base installs a basic Linux workstation,
 #     without graphical dependencies (default runlevel 3).
 #   If you need a graphical environment, please run rather
-#     e.g. workstation::gnome or workstation::mate, which
-#     include this file and set the proper runlevel etc.
+#     workstation::gnome, which includes this file and sets
+#     the proper runlevel etc.
 
 ### software installation
-## additional repos - FOSS-only
-include_recipe 'workstation::_repo'
 ## Free and Open Source Software
 include_recipe 'workstation::_c'
 include_recipe 'workstation::_crypto_policy'

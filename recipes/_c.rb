@@ -1,7 +1,7 @@
 ### installs and configures gcc, clang, and related cross-compilers
 
-unless node['workstation']['c']['packages'].empty?
-  node['workstation']['c']['packages'].each do |pkg|
+unless node['workstation']['_c']['packages'].empty?
+  node['workstation']['_c']['packages'].each do |pkg|
     package pkg do
       action :install
     end
