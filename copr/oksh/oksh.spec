@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           oksh
-Version:        6.6
+Version:        6.7
 Release:        1%{?dist}
 Summary:        OpenBSD Kornshell
 
@@ -38,6 +38,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Thu Sep 03 2020 David Goerger - 6.7-1
+- update to 6.7-release
+
 * Thu Dec 26 2019 David Goerger - 6.6-1
 - disable static build
 - update to 6.6-release
