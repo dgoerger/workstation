@@ -23,7 +23,7 @@ Portable OpenBSD ksh, based on the Public Domain Korn Shell (pdksh).
 
 
 %build
-./configure --enable-ksh --prefix=/usr --mandir=/usr/share/man
+./configure --enable-ksh --prefix=/usr --bindir=/usr/bin --mandir=/usr/share/man
 make %{?_smp_mflags}
 
 
