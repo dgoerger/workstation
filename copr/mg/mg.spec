@@ -10,7 +10,7 @@ License:        ISC
 URL:            https://github.com/ibara/mg
 Source0:        https://github.com/ibara/mg/releases/download/mg-%{version}/mg-%{version}.tar.gz
 
-BuildRequires:  gcc
+BuildRequires:  gcc ncurses-devel
 
 
 %description
